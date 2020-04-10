@@ -24,7 +24,7 @@
 \usepackage{titlesec}
 \usepackage[figurename=Fig.]{caption}
 \usepackage[tablename=Tabella]{caption}
-\usepackage[style=alphabetic,sorting=ynt]{biblatex}
+\usepackage[style=numeric,sorting=ynt]{biblatex}
 
 % COURTESY OF BETOHAKU FROM STACKEXCHANGE
 \newcommand{\marrow}[5]{%
@@ -78,8 +78,50 @@
 
     \section{\centering\textsc{Introduzione} } % Cioè l'ultima sezione da scrivere
 
+    % Full tree-level amplitude
+    \begin{equation}
+    \lvert\mathcal{M}\rvert^2=\lvert\mathcal{M}_1+\mathcal{M}_2+\mathcal{M}_3+\mathcal{M}_4\rvert^2
+    \end{equation}
+
+
     \section{\centering\textsc{L'interazione con il campo scalare} }
-    
+
+    % Scalar field lagrangian
+    \begin{equation}
+    \mathcal{L}_s=\left(D_\mu\Phi\right)^\dagger D^\mu\Phi+\frac{\lambda}{4!}\left(\lvert\Phi\rvert^2+F^2\right)^2, \ \ \ \ \lambda>0
+    \end{equation}
+
+    % Scalar field definition in terms of Higgs and phi0
+    \begin{equation}
+    \Phi=\begin{pmatrix}0 \\F\end{pmatrix}+\begin{pmatrix}\phi_1 \\\phi_2\end{pmatrix}=\begin{pmatrix}0\\F\end{pmatrix}+\frac{1}{\sqrt{2}}\begin{pmatrix}\sqrt{2}\phi_1 \\H+i\phi^0\end{pmatrix}
+    \end{equation}
+
+    % Scalar-fermion lagrangian (only muon and electron are used)
+    \begin{equation}
+    \mathcal{L}_{sf}=\sum_{i=e,\mu}y_i\bar{\psi}_{i,L}\Phi\psi_{i,R}+h.c.
+    \end{equation}
+
+    % Yukawa coupling constant
+    \begin{equation}
+    y_j=\frac{1}{\sqrt{2}}g\frac{m_j}{M_W}
+    \end{equation}
+
+    % Computation of scalar-lepton vertices
+    \begin{equation}
+    \begin{split}
+    \mathcal{L}_{sf}\Longrightarrow\ &\frac{y_j}{\sqrt{2}}\begin{pmatrix}\bar{\nu}_{j} & \bar{\ell}_{j}\end{pmatrix}\left(\frac{1+\gamma^5}{2}\right)\begin{pmatrix}-\\ \sqrt{2}F+H+i\phi^0\end{pmatrix}\left(\frac{1+\gamma^5}{2}\right)\ell_j+h.c.\\
+    =&y_j\bar{\ell}_jF\ell_j+\frac{y_j}{\sqrt{2}}\bar{\ell}_j H \ell_j+i\frac{y_j}{\sqrt{2}}\bar{\ell}_j \gamma^5\phi^0 \ell_j
+    \end{split}
+    \end{equation}
+
+    % muon-to-W mass ratio
+    \begin{equation}
+    \frac{m_{\mu}}{M_W}\simeq 10^{-3}
+    \end{equation}
+
+
+    \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak
+
     \begin{multicols}{2}
 
     % QED contribution
@@ -137,6 +179,15 @@
     \end{fmffile} \\
 
     \end{multicols}
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{1}{4}e^4\frac{1}{\left(p_1+p_2\right)^2}&\mathrm{tr}\left\{\left(\slashed{p}_2+m_e\right)\gamma^\nu\left(\slashed{p}_1-m_e\right)\gamma^\mu\right\} \\
+    \times&\mathrm{tr}\left\{\left(\slashed{p}_4-m_\mu\right)\gamma_\nu\left(\slashed{p}_3+m_\mu\right)\gamma_\mu\right\}
+    \end{split}
+    \end{equation}
+
+
+    \section{\centering\textsc{L'ampiezza del diagramma con linea interna di Higgs} } % Caratteristiche di interazione con scalare
 
     % Higgs-boson contribution
     \begin{fmffile}{higgs}
@@ -159,7 +210,7 @@
             \marrow{n}{left}{lft}{$p_2$}{i2,v1}
             \marrow{o}{up}{top}{$p_1+p_2$}{v1,v2}
             \marrow{p}{right}{rt}{$p_3$}{v2,o1}
-            \marrow{p}{right}{rt}{$p_4$}{v2,o2}
+            \marrow{q}{right}{rt}{$p_4$}{v2,o2}
         \end{fmfgraph*}
         \end{gathered}
         \end{equation*}
@@ -169,19 +220,14 @@
     % EQUATIONS
     % ----------
 
-    % Scalar field lagrangian
-    \begin{equation}
-    \mathcal{L}_s=\left(D_\mu\Phi\right)^\dagger D^\mu\Phi+\frac{\lambda}{4!}\left(\lvert\Phi\rvert^2+F^2\right)^2, \ \ \ \ \lambda>0
-    \end{equation}
 
-    % Scalar field definition
-    \begin{equation}
-    \end{equation}
+    % SEZIONE D'URTO DIFFERENZIALE
 
     \nocite{sterman}
     \nocite{veltman}
     %\nocite{bjorkendrell}
     %\nocite{peskinschroeder}
+    \nocite{pdg}
     \medskip
 
     \printbibliography
