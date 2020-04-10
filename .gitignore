@@ -1,0 +1,9 @@
+# ignore everiting...
+*
+
+# ... but these extensions/files
+!.gitignore
+!*.tex
+!books.bib
+!*.pdf
+!*.sh

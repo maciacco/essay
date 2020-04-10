@@ -1,0 +1,189 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                 DOCUMENT FOR QFT 0 ESSAY                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------------------------------------------
+% INCLUDING PACKAGES
+%-----------------------------------------------------------------
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage{booktabs,amsmath}
+\usepackage{amsfonts}
+\usepackage{feynmp-auto}
+\usepackage{slashed}
+\usepackage{titling,lipsum}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage[figurename=Fig.]{caption}
+\usepackage[tablename=Tabella]{caption}
+\usepackage[style=alphabetic,sorting=ynt]{biblatex}
+
+% COURTESY OF BETOHAKU FROM STACKEXCHANGE
+\newcommand{\marrow}[5]{%
+    \fmfcmd{style_def marrow#1
+    expr p = drawarrow subpath (1/4, 3/4) of p shifted 7 #2 withpen pencircle scaled 0.4;
+    label.#3(btex #4 etex, point 0.5 of p shifted 9 #2);
+    enddef;}
+    \fmf{marrow#1,tension=0}{#5}}
+
+\renewcommand{\thesection}{\Roman{section}} % use roman numerals for section numbering
+\titleformat*{\section}{\large\bfseries}    % set section heading format
+
+\addbibresource{books.bib}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\rhead{\slshape \leftmark}
+\cfoot{\thepage} % page number
+%-----------------------------------------------------------------
+
+% \setlength{\columnseprule}{1pt}
+
+\setlength{\droptitle}{-10em}   % This is your set screw
+\begin{document}
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+    %-----------------------------------------------------------------
+    % TITLE
+    %-----------------------------------------------------------------
+    
+    \begin{center} % TITOLO PROVVISORIO: Il processo $e^+ e^- \to \mu ^+ \mu ^-$ in approssimazione di Born nel Modello Standard
+        \LARGE{\textbf{\textsc{Il processo $e^+ e^- \to \mu ^+ \mu ^-$ in approssimazione di Born nel Modello Standard}}}
+        \bigskip\\\large{\textsc{Mario Ciacco}}
+        \\\large{\textsc{Matricola 835681}}
+    \end{center}
+    \normalsize
+
+    %-----------------------------------------------------------------
+    % ABSTRACT
+    %-----------------------------------------------------------------
+
+    \begin{abstract}
+    ABSTRACT
+    \end{abstract}
+
+    \unitlength = 0.5mm % Feynman diagrams dimensions
+    
+    % -----------------
+    % FEYNMAN DIAGRAMS
+    % -----------------
+
+    \section{\centering\textsc{Introduzione} } % Cioè l'ultima sezione da scrivere
+
+    \section{\centering\textsc{L'interazione con il campo scalare} }
+    
+    \begin{multicols}{2}
+
+    % QED contribution
+    \begin{fmffile}{gamma}
+        \begin{equation*}
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmflabel{$e^-$}{i1}
+            \fmflabel{$e^+$}{i2}
+            \fmflabel{$\mu^-$}{o1}
+            \fmflabel{$\mu^+$}{o2}
+            \fmf{photon,label=$\gamma$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+            % Momentum arrows
+            \marrow{a}{left}{lft}{$p_1$}{i1,v1}
+            \marrow{b}{left}{lft}{$p_2$}{i2,v1}
+            \marrow{c}{up}{top}{$p_1+p_2$}{v1,v2}
+            \marrow{d}{right}{rt}{$p_3$}{v2,o1}
+            \marrow{e}{right}{rt}{$p_4$}{v2,o2}
+        \end{fmfgraph*}
+        \end{gathered}
+        \end{equation*}
+    \end{fmffile} \\
+
+    % Z-boson contribution (WEAK)
+    \begin{fmffile}{zee}
+        \begin{equation*}
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmflabel{$e^-$}{i1}
+            \fmflabel{$e^+$}{i2}
+            \fmflabel{$\mu^-$}{o1}
+            \fmflabel{$\mu^+$}{o2}
+            \fmf{vanilla,label=$Z$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+            % Momentum arrows
+            \marrow{f}{left}{lft}{$p_1$}{i1,v1}
+            \marrow{g}{left}{lft}{$p_2$}{i2,v1}
+            \marrow{h}{up}{top}{$p_1+p_2$}{v1,v2}
+            \marrow{i}{right}{rt}{$p_3$}{v2,o1}
+            \marrow{l}{right}{rt}{$p_4$}{v2,o2}
+        \end{fmfgraph*}
+        \end{gathered}
+        \end{equation*}
+    \end{fmffile} \\
+
+    \end{multicols}
+
+    % Higgs-boson contribution
+    \begin{fmffile}{higgs}
+        \begin{equation*}
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmflabel{$e^-$}{i1}
+            \fmflabel{$e^+$}{i2}
+            \fmflabel{$\mu^-$}{o1}
+            \fmflabel{$\mu^+$}{o2}
+            \fmf{dashes,label=$H$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+            % Momentum arrows
+            \marrow{m}{left}{lft}{$p_1$}{i1,v1}
+            \marrow{n}{left}{lft}{$p_2$}{i2,v1}
+            \marrow{o}{up}{top}{$p_1+p_2$}{v1,v2}
+            \marrow{p}{right}{rt}{$p_3$}{v2,o1}
+            \marrow{p}{right}{rt}{$p_4$}{v2,o2}
+        \end{fmfgraph*}
+        \end{gathered}
+        \end{equation*}
+    \end{fmffile}
+
+    % ----------
+    % EQUATIONS
+    % ----------
+
+    % Scalar field lagrangian
+    \begin{equation}
+    \mathcal{L}_s=\left(D_\mu\Phi\right)^\dagger D^\mu\Phi+\frac{\lambda}{4!}\left(\lvert\Phi\rvert^2+F^2\right)^2, \ \ \ \ \lambda>0
+    \end{equation}
+
+    % Scalar field definition
+    \begin{equation}
+    \end{equation}
+
+    \nocite{sterman}
+    \nocite{veltman}
+    %\nocite{bjorkendrell}
+    %\nocite{peskinschroeder}
+    \medskip
+
+    \printbibliography
+
+\end{document}
