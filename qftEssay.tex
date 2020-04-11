@@ -122,14 +122,31 @@
     \end{equation}
 
 
-    \section{\centering\textsc{L'invarianza di gauge dell'elemento di matrice \textit{S}} }
-
-    \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak
+    \section{\centering\textsc{L'invarianza di gauge dell'elemento di matrice \textit{S}} } % verificata per il diagramma ad albero, quindi solo per un ordine perturbativo
 
     % Full tree-level amplitude
     \begin{equation}
     \lvert\mathcal{M}\rvert^2=\lvert\mathcal{M}_1+\mathcal{M}_2+\mathcal{M}_3+\mathcal{M}_4\rvert^2
     \end{equation}
+
+    % Propagators in general R_xi gauge
+    \begin{equation}
+    iG_F^{\mu\nu}(p)=\frac{-i}{p^2-M_Z^2}\left\{g^{\mu\nu}-(1-\xi^2)\frac{p^\mu p^\nu}{p^2-\xi^2M_Z^2}\right\};\ \ \ \ \ i\Delta_F(p)=\frac{i}{p^2-\xi^2M_Z^2}
+    \end{equation}
+
+    % inserire riferimento alla conservazione dell'impulso
+
+    % M2+M3 - first considerations -> only considering gauge dependent terms
+    \begin{equation}
+    \begin{split}
+    \mathcal{M}_2+\mathcal{M}_3\Rightarrow-\left({\frac{g}{4c}\right)^2 {\frac{i(1-\xi^2)}{s^2-M_Z^2}}{\frac{(p_1+p_2)^\mu(p_3+p_4)^\nu}{s-\xi^2 M_Z^2}}\bar{v}(p_1)\gamma_\mu(V+\gamma^5)u(p_2)\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4) \\
+    +\left(\frac{g}{2}\right)^2\frac{m_e m_\mu}{M_W^20\frac{i}{s-\xi^2M_Z^2}\bar{v}(p_1)\gamma^5u_2\bar{u}_3\gamma^5v_4
+    \end{split}
+    \end{equation}
+
+
+    \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak
+
 
     % QED contribution
     \begin{fmffile}{gamma}
@@ -159,12 +176,12 @@
     \end{fmffile}
 
     % QED: (spin averaged) modulus squared of amplitude
-    \begin{equation}
-    \begin{split}
-    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{1}{4}e^4\frac{1}{(p_1+p_2)^2}&\mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^\nu(\slashed{p}_1-m_e)\gamma^\mu\} \\
-     \times&\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma_\nu(\slashed{p}_3+m_\mu)\gamma_\mu\}
-    \end{split}
-    \end{equation}
+    % \begin{equation}
+    % \begin{split}
+    % \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{1}{4}e^4\frac{1}{(p_1+p_2)^2}&\mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^\nu(\slashed{p}_1-m_e)\gamma^\mu\} \\
+    %  \times&\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma_\nu(\slashed{p}_3+m_\mu)\gamma_\mu\}
+    % \end{split}
+    % \end{equation}
 
     % QED -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
@@ -238,49 +255,53 @@
     &\frac{d\sigma}{d\cos\theta}=\frac{1}{32\pi s}\left(\frac{s-4m_\mu^2}{s-4m_e^2}\right)^{\frac{1}{2}} \Bigg\{ \Bigg. \frac{e^4}{s^2}\Big\{ \Big. s^2+(s-4m_\mu^2)(s-4m_e^2)\cos^2\theta+4(m_e^2+m_\mu^2)s\Big. \Big\} \\
     +&\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\Big\{ \Big. (V^2+1)^2\left[s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta\right]+4V^2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
     +&2(V^4-1)\left[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2\right]+8m_\mu^2 m_e^2(V^2-1)^2 \Big. \Big\}\\
-    +&e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
+    +&2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
     +&4V^2(m_e^2+m_\mu^2) \Big. \Big\}
     \Bigg. \Bigg\}
     \end{split}
     \end{equation}
 
 
-    \section{\centering\textsc{L'ampiezza del diagramma con linea interna di Higgs} } % Caratteristiche di interazione con scalare
+    % -----------------------------------------------------------------------------------------------
+    % QUESTA SEZIONE VA COMPLETATA SOLO NEL CASO IN CUI FOSSE NECESSARIO COPRIRE ANCORA DELLO SPAZIO
+    % -----------------------------------------------------------------------------------------------
 
-    % Higgs-boson contribution
-    \begin{fmffile}{higgs}
-        \begin{equation*}
-        \begin{gathered}
-        \begin{fmfgraph*}(60,30)
-            \fmfleft{i1,i2}
-            \fmfright{o1,o2}
-            \fmflabel{$e^-$}{i1}
-            \fmflabel{$e^+$}{i2}
-            \fmflabel{$\mu^-$}{o1}
-            \fmflabel{$\mu^+$}{o2}
-            \fmf{dashes,label=$H$}{v1,v2}
-            \fmf{fermion}{i1,v1}
-            \fmf{fermion}{v1,i2}
-            \fmf{fermion}{v2,o1}
-            \fmf{fermion}{o2,v2}
-            % Momentum arrows
-            \marrow{m}{left}{lft}{$p_1$}{i1,v1}
-            \marrow{n}{left}{lft}{$p_2$}{i2,v1}
-            \marrow{o}{up}{top}{$p_1+p_2$}{v1,v2}
-            \marrow{p}{right}{rt}{$p_3$}{v2,o1}
-            \marrow{q}{right}{rt}{$p_4$}{v2,o2}
-        \end{fmfgraph*}
-        \end{gathered} \ \ \ \Longrightarrow\mathcal{M}_H=\left(\frac{ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{-i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)
-        \end{equation*}
-    \end{fmffile}
+    % \section{\centering\textsc{L'ampiezza del diagramma con linea interna di Higgs} } % Caratteristiche di interazione con scalare
 
-    % HIGGS -> Mandelstam (spin averaged) modulus squared of amplitude
-    \begin{equation}
-    \begin{split}
-    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_H\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
-     -&2(m_e^2+m_\mu^2)s+8m_e^2m_\mu^2\}
-    \end{split}
-    \end{equation}
+    % % Higgs-boson contribution
+    % \begin{fmffile}{higgs}
+    %     \begin{equation*}
+    %     \begin{gathered}
+    %     \begin{fmfgraph*}(60,30)
+    %         \fmfleft{i1,i2}
+    %         \fmfright{o1,o2}
+    %         \fmflabel{$e^-$}{i1}
+    %         \fmflabel{$e^+$}{i2}
+    %         \fmflabel{$\mu^-$}{o1}
+    %         \fmflabel{$\mu^+$}{o2}
+    %         \fmf{dashes,label=$H$}{v1,v2}
+    %         \fmf{fermion}{i1,v1}
+    %         \fmf{fermion}{v1,i2}
+    %         \fmf{fermion}{v2,o1}
+    %         \fmf{fermion}{o2,v2}
+    %         % Momentum arrows
+    %         \marrow{m}{left}{lft}{$p_1$}{i1,v1}
+    %         \marrow{n}{left}{lft}{$p_2$}{i2,v1}
+    %         \marrow{o}{up}{top}{$p_1+p_2$}{v1,v2}
+    %         \marrow{p}{right}{rt}{$p_3$}{v2,o1}
+    %         \marrow{q}{right}{rt}{$p_4$}{v2,o2}
+    %     \end{fmfgraph*}
+    %     \end{gathered} \ \ \ \Longrightarrow\mathcal{M}_H=\left(\frac{ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)
+    %     \end{equation*}
+    % \end{fmffile}
+
+    % % HIGGS -> Mandelstam (spin averaged) modulus squared of amplitude
+    % \begin{equation}
+    % \begin{split}
+    % \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_H\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
+    %  -&2(m_e^2+m_\mu^2)s+8m_e^2m_\mu^2\}
+    % \end{split}
+    % \end{equation}
 
     \nocite{sterman}
     \nocite{veltman}
