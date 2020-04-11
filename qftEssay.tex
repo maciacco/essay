@@ -47,7 +47,7 @@
 
 % \setlength{\columnseprule}{1pt}
 
-\setlength{\droptitle}{-10em}   % This is your set screw
+\setlength{\droptitle}{-8em}   % This is your set screw
 \begin{document}
 \renewcommand{\abstractname}{\vspace{-\baselineskip}}
 
@@ -122,7 +122,6 @@
 
     \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak
 
-    \begin{multicols}{2}
 
     % QED contribution
     \begin{fmffile}{gamma}
@@ -147,9 +146,22 @@
             \marrow{d}{right}{rt}{$p_3$}{v2,o1}
             \marrow{e}{right}{rt}{$p_4$}{v2,o2}
         \end{fmfgraph*}
-        \end{gathered}
+        \end{gathered} \ \ \ \Longrightarrow\mathcal{M}_1=\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)
         \end{equation*}
-    \end{fmffile} \\
+    \end{fmffile}
+
+    % QED: (spin averaged) modulus squared of amplitude
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{1}{4}e^4\frac{1}{(p_1+p_2)^2}&\mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^\nu(\slashed{p}_1-m_e)\gamma^\mu\} \\
+     \times&\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma_\nu(\slashed{p}_3+m_\mu)\gamma_\mu\}
+    \end{split}
+    \end{equation}
+
+    % QED -> Mandelstam (spin averaged) modulus squared of amplitude
+    \begin{equation}
+    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{2e^4}{s^2}\{(u-m_e^2-m_\mu^2)^2+(t-m_e^2-m_\mu^2)^2+2(m_e^2+m_\mu^2)s\}
+    \end{equation}
 
     % Z-boson contribution (WEAK)
     \begin{fmffile}{zee}
@@ -174,18 +186,30 @@
             \marrow{i}{right}{rt}{$p_3$}{v2,o1}
             \marrow{l}{right}{rt}{$p_4$}{v2,o2}
         \end{fmfgraph*}
-        \end{gathered}
+        \end{gathered} \ \ \ \Longrightarrow\mathcal{M}_2=\left(\frac{ig}{4c}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)
         \end{equation*}
-    \end{fmffile} \\
+    \end{fmffile}
 
-    \end{multicols}
+    % WEAK -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
     \begin{split}
-    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{1}{4}e^4\frac{1}{\left(p_1+p_2\right)^2}&\mathrm{tr}\left\{\left(\slashed{p}_2+m_e\right)\gamma^\nu\left(\slashed{p}_1-m_e\right)\gamma^\mu\right\} \\
-    \times&\mathrm{tr}\left\{\left(\slashed{p}_4-m_\mu\right)\gamma_\nu\left(\slashed{p}_3+m_\mu\right)\gamma_\mu\right\}
+    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_2\rvert^2=2\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\{&[(V^2+1)^2+4V^2](u-m_e^2-m_\mu^2)^2\\
+    +&[(V^2+1)^2-4V^2](t-m_e^2-m_\mu^2)^2\\
+    +&2(V^4-1)[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2]\\
+    +&8m_\mu^2 m_e^2(V^2-1)^2\}
     \end{split}
     \end{equation}
 
+    % WEAK x QED -> Mandelstam (spin averaged) modulus squared of amplitude
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{Spin}\mathcal{M}_1\mathcal{M}_2^{\dagger}=2e^2\left(\frac{g}{4c}\right)\frac{1}{s(s-M_Z^2)}\{&(V^2+1)(u-m_e^2-m_\mu^2)^2\\
+    +&(V^2-1)(t-m_e^2-m_\mu^2)^2\\
+    +&2V^2(m_e^2+m_\mu^2)s\}
+    \end{split}
+    \end{equation}
+
+    % CINEMATICA: LE DEFINIZIONI DEGLI IMPULSI INLINE
 
     \section{\centering\textsc{L'ampiezza del diagramma con linea interna di Higgs} } % Caratteristiche di interazione con scalare
 
@@ -212,7 +236,7 @@
             \marrow{p}{right}{rt}{$p_3$}{v2,o1}
             \marrow{q}{right}{rt}{$p_4$}{v2,o2}
         \end{fmfgraph*}
-        \end{gathered}
+        \end{gathered}=
         \end{equation*}
     \end{fmffile}
 
