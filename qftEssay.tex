@@ -78,17 +78,23 @@
 
     \section{\centering\textsc{Introduzione} } % Cioè l'ultima sezione da scrivere
 
-    % Full tree-level amplitude
+    % neutral current lagrangian for electron and muon
     \begin{equation}
-    \lvert\mathcal{M}\rvert^2=\lvert\mathcal{M}_1+\mathcal{M}_2+\mathcal{M}_3+\mathcal{M}_4\rvert^2
+    \mathcal{L}_{nc}=\sum_{i=e,\mu}\left\{\frac{g}{4\cos\theta_W}\bar{\ell}_i\gamma^\mu(4\sin^2\theta_W-1+\gamma^5)\ell_iZ_\mu-e\bar{\ell}_i\gamma^\mu\ell_iA_\mu\right\}
     \end{equation}
+
+    % Scalar-fermion lagrangian (only muon and electron are used)
+    \begin{equation}
+    \mathcal{L}_{sf}=-\sum_{i=e,\mu}\left\{y_i\bar{\psi}_{i,L}\Phi\psi_{i,R}+h.c.\right\}
+    \end{equation}
+
 
 
     \section{\centering\textsc{L'interazione con il campo scalare} }
 
     % Scalar field lagrangian
     \begin{equation}
-    \mathcal{L}_s=\left(D_\mu\Phi\right)^\dagger D^\mu\Phi+\frac{\lambda}{4!}\left(\lvert\Phi\rvert^2+F^2\right)^2, \ \ \ \ \lambda>0
+    \mathcal{L}_s=\left(D_\mu\Phi\right)^\dagger D^\mu\Phi+\frac{\lambda}{4!}\left(\lvert\Phi\rvert^2-F^2\right)^2, \ \ \ \ \lambda>0
     \end{equation}
 
     % Scalar field definition in terms of Higgs and phi0
@@ -96,10 +102,6 @@
     \Phi=\begin{pmatrix}0 \\F\end{pmatrix}+\begin{pmatrix}\phi_1 \\\phi_2\end{pmatrix}=\begin{pmatrix}0\\F\end{pmatrix}+\frac{1}{\sqrt{2}}\begin{pmatrix}\sqrt{2}\phi_1 \\H+i\phi^0\end{pmatrix}
     \end{equation}
 
-    % Scalar-fermion lagrangian (only muon and electron are used)
-    \begin{equation}
-    \mathcal{L}_{sf}=\sum_{i=e,\mu}y_i\bar{\psi}_{i,L}\Phi\psi_{i,R}+h.c.
-    \end{equation}
 
     % Yukawa coupling constant
     \begin{equation}
@@ -120,11 +122,13 @@
     \end{equation}
 
 
+    \section{\centering\textsc{L'invarianza di gauge dell'elemento di matrice \textit{S}} }
+
     \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak
 
-    % neutral current lagrangian for electron and muon
+    % Full tree-level amplitude
     \begin{equation}
-    \mathcal{L}_{nc}=\sum_{i=e,\mu}\left\{\frac{g}{4\cos\theta_W}\bar{\ell}_i\gamma^\mu(4\sin^2\theta_W-1+\gamma^5)\ell_iZ_\mu-e\bar{\ell}_i\gamma^\mu\ell_iA_\mu\right\}
+    \lvert\mathcal{M}\rvert^2=\lvert\mathcal{M}_1+\mathcal{M}_2+\mathcal{M}_3+\mathcal{M}_4\rvert^2
     \end{equation}
 
     % QED contribution
