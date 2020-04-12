@@ -7,7 +7,7 @@
 % INCLUDING PACKAGES
 %-----------------------------------------------------------------
 \documentclass[11pt]{article}
-\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[a4paper,margin=2.4cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,italian]{babel}
@@ -47,7 +47,7 @@
 
 % \setlength{\columnseprule}{1pt}
 
-\setlength{\droptitle}{-8em}   % This is your set screw
+\setlength{\droptitle}{-6em}   % This is your set screw
 \begin{document}
 \renewcommand{\abstractname}{\vspace{-\baselineskip}}
 
@@ -67,30 +67,33 @@
     %-----------------------------------------------------------------
 
     \begin{abstract}
-    ABSTRACT
+    In questo \textit{essay} sono calcolati i termini d'interazione fermione-antifermione-scalare nel Modello Standard necessari per il calcolo
+    completo dell'ampiezza del processo ed è verificata l'invarianza di gauge dell'elemento di matrice $S$ all'ordine perturbativo più basso.
+    Viene poi presentato il calcolo della sezione d'urto differenziale in cui si trascurano i contributi dell'interazione con il campo scalare.
+    % TENERE SOLO SE NECESSARIO
+    In conclusione si calcola l'ampiezza relativa al diagramma con linea del campo di Higgs come esempio di interazione fermione-scalare.
     \end{abstract}
 
     \unitlength = 0.5mm % Feynman diagrams dimensions
     
-    % -----------------
-    % FEYNMAN DIAGRAMS
-    % -----------------
-
+    % -------------
+    % INTRODUCTION
+    % -------------
     \section{\centering\textsc{Introduzione} } % Cioè l'ultima sezione da scrivere
-
+    Le interazioni elettrodeboli sono descritte in modo unificato nella lagrangiana con gruppo di simmetria $SU(2)\times U(1)$. In tale modello, i leptoni interagiscono con i quattro campi di gauge 
+    $W^\pm$, $Z$ e $A$, e con il doppietto scalare $\Phi$ necessario per l'introduzione dei termini di massa. Nel caso particolare del processo $e^+e^-\to\mu^+\mu^-$, all'ordine più basso in teoria delle perturbazioni, 
+    la parte di lagrangiana d'interazione da considerare è formata da due contributi separati. Il primo è il termine di correnti neutre
     % neutral current lagrangian for electron and muon
     \begin{equation}
     \mathcal{L}_{nc}=\sum_{i=e,\mu}\left\{\frac{g}{4\cos\theta_W}\bar{\ell}_i\gamma^\mu(4\sin^2\theta_W-1+\gamma^5)\ell_iZ_\mu-e\bar{\ell}_i\gamma^\mu\ell_iA_\mu\right\}
     \end{equation}
+    da cui si estrae il vertice a tre linee con il campo $Z$ (risp. $A$) e la coppia leptone-antileptone, di valore $i(g/4c)\gamma^\mu(V+\gamma^5)$ (risp. $-ie\gamma^\mu$), avendo posto $c\equiv\cos\theta_W$ e $V\equiv4\sin^2\theta_W+1$.
+    Il secondo contributo è dato dall'interazione dei campi dell'elettrone e del muone con le componenti del campo $\Phi$.
 
-    % Scalar-fermion lagrangian (only muon and electron are used)
-    \begin{equation}
-    \mathcal{L}_{sf}=-\sum_{i=e,\mu}\left\{y_i\bar{\psi}_{i,L}\Phi\psi_{i,R}+h.c.\right\}
-    \end{equation}
-
-
-
-    \section{\centering\textsc{L'interazione con il campo scalare} }
+    % --------------------------------------
+    % THE SCALAR FIELD AND ITS INTERACTIONS
+    % --------------------------------------
+    \section{\centering\textsc{L'interazione con il campo scalare} } 
 
     % Scalar field lagrangian
     \begin{equation}
@@ -102,6 +105,10 @@
     \Phi=\begin{pmatrix}0 \\F\end{pmatrix}+\begin{pmatrix}\phi_1 \\\phi_2\end{pmatrix}=\begin{pmatrix}0\\F\end{pmatrix}+\frac{1}{\sqrt{2}}\begin{pmatrix}\sqrt{2}\phi_1 \\H+i\phi^0\end{pmatrix}
     \end{equation}
 
+    % Scalar-fermion lagrangian (only muon and electron are used)
+    \begin{equation}
+    \mathcal{L}_{sf}=-\sum_{i=e,\mu}\left\{y_i\bar{\psi}_{i,L}\Phi\psi_{i,R}+h.c.\right\}
+    \end{equation}
 
     % Yukawa coupling constant
     \begin{equation}
@@ -126,7 +133,7 @@
 
     % Full tree-level amplitude
     \begin{equation}
-    \lvert\mathcal{M}\rvert^2=\lvert\mathcal{M}_1+\mathcal{M}_2+\mathcal{M}_3+\mathcal{M}_4\rvert^2
+    \lvert M\rvert^2=\lvert M_1+ M_2+ M_3+ M_4\rvert^2
     \end{equation}
 
     % Propagators in general R_xi gauge
@@ -139,8 +146,23 @@
     % M2+M3 - first considerations -> only considering gauge dependent terms
     \begin{equation}
     \begin{split}
-    \mathcal{M}_2+\mathcal{M}_3\Rightarrow-\left({\frac{g}{4c}\right)^2 {\frac{i(1-\xi^2)}{s^2-M_Z^2}}{\frac{(p_1+p_2)^\mu(p_3+p_4)^\nu}{s-\xi^2 M_Z^2}}\bar{v}(p_1)\gamma_\mu(V+\gamma^5)u(p_2)\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4) \\
-    +\left(\frac{g}{2}\right)^2\frac{m_e m_\mu}{M_W^20\frac{i}{s-\xi^2M_Z^2}\bar{v}(p_1)\gamma^5u_2\bar{u}_3\gamma^5v_4
+     M_2+ M_3\Rightarrow -&\left(\frac{g}{4c}\right)^2 \frac{i(1-\xi^2)}{s^2-M_Z^2}\frac{(p_1+p_2)^\mu(p_3+p_4)^\nu}{s-\xi^2 M_Z^2}\bar{v}(p_1)\gamma_\mu(V+\gamma^5)u(p_2)\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4)\\
+    +&\left(\frac{g}{2}\right)^2\frac{m_e m_\mu}{M_W^2}\frac{i}{s-\xi^2M_Z^2}\bar{v}(p_1)\gamma^5u(p_2)\bar{u}(p_3)\gamma^5v(p_4)
+    \end{split}
+    \end{equation}
+
+    % M2 - Dirac equation applied
+    \begin{equation}
+    \begin{split}
+    M_2\Rightarrow-\left(\frac{g}{4c}\right)^2 \frac{i(1-\xi^2)}{s^2-M_Z^2}\frac{1}{s-\xi^2 M_Z^2}\Big\{ \Big.&m_e[-\bar{v}(p_1)\gamma_\mu(V+\gamma^5)u(p_2)+\bar{v}(p_1)\gamma_\mu(V-\gamma^5)u(p_2)] \\
+    \times &m_\mu[\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4)-\bar{u}(p_3)\gamma_\nu(V-\gamma^5)v(p_4)]\Big. \Big\}
+    \end{split}
+    \end{equation}
+
+    % Gauge invariance proof
+    \begin{equation}
+    \begin{split}
+    M_2+M_3\Rightarrow\left(\frac{g}{4c}\right)^2\frac{4im_e m_\mu}{s-\xi^2M_Z^2}\left\{\frac{M_Z^2-\xi^2M_Z^2+s-M_Z^2}{M_Z^2(s-M_Z^2)}\right\}\bar{v}(p_1)\gamma^5u(p_2)\bar{u}(p_3)\gamma^5v(p_4)
     \end{split}
     \end{equation}
 
@@ -150,7 +172,7 @@
 
     % QED contribution
     \begin{fmffile}{gamma}
-        \begin{equation*}
+        \begin{equation}
         \begin{gathered}
         \begin{fmfgraph*}(60,30)
             \fmfleft{i1,i2}
@@ -171,26 +193,26 @@
             \marrow{d}{right}{rt}{$p_3$}{v2,o1}
             \marrow{e}{right}{rt}{$p_4$}{v2,o2}
         \end{fmfgraph*}
-        \end{gathered} \ \ \ \Longrightarrow\mathcal{M}_1=\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)
-        \end{equation*}
+        \end{gathered} \ \ \ \Longrightarrow M_1=\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)
+        \end{equation}
     \end{fmffile}
 
     % QED: (spin averaged) modulus squared of amplitude
     % \begin{equation}
     % \begin{split}
-    % \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{1}{4}e^4\frac{1}{(p_1+p_2)^2}&\mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^\nu(\slashed{p}_1-m_e)\gamma^\mu\} \\
+    % \frac{1}{4}\sum_{spin}\lvert M_1\rvert^2=\frac{1}{4}e^4\frac{1}{(p_1+p_2)^2}&\mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^\nu(\slashed{p}_1-m_e)\gamma^\mu\} \\
     %  \times&\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma_\nu(\slashed{p}_3+m_\mu)\gamma_\mu\}
     % \end{split}
     % \end{equation}
 
     % QED -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
-    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_1\rvert^2=\frac{2e^4}{s^2}\{(u-m_e^2-m_\mu^2)^2+(t-m_e^2-m_\mu^2)^2+2(m_e^2+m_\mu^2)s\}
+    \frac{1}{4}\sum_{spin}\lvert M_1\rvert^2=\frac{2e^4}{s^2}\{(u-m_e^2-m_\mu^2)^2+(t-m_e^2-m_\mu^2)^2+2(m_e^2+m_\mu^2)s\}
     \end{equation}
 
     % Z-boson contribution (WEAK)
     \begin{fmffile}{zee}
-        \begin{equation*}
+        \begin{equation}
         \begin{gathered}
         \begin{fmfgraph*}(60,30)
             \fmfleft{i1,i2}
@@ -211,14 +233,14 @@
             \marrow{i}{right}{rt}{$p_3$}{v2,o1}
             \marrow{l}{right}{rt}{$p_4$}{v2,o2}
         \end{fmfgraph*}
-        \end{gathered} \ \ \ \Longrightarrow\mathcal{M}_2=\left(\frac{ig}{4c}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)
-        \end{equation*}
+        \end{gathered} \ \ \ \Longrightarrow M_2=\left(\frac{ig}{4c}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)
+        \end{equation}
     \end{fmffile}
 
     % WEAK -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
     \begin{split}
-    \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_2\rvert^2=2\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\{&[(V^2+1)^2+4V^2](u-m_e^2-m_\mu^2)^2\\
+    \frac{1}{4}\sum_{spin}\lvert M_2\rvert^2=2\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\{&[(V^2+1)^2+4V^2](u-m_e^2-m_\mu^2)^2\\
     +&[(V^2+1)^2-4V^2](t-m_e^2-m_\mu^2)^2\\
     +&2(V^4-1)[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2]\\
     +&8m_\mu^2 m_e^2(V^2-1)^2\}
@@ -228,7 +250,7 @@
     % WEAK x QED -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
     \begin{split}
-    \frac{1}{4}\sum_{Spin}\mathcal{M}_1\mathcal{M}_2^{\dagger}=2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\{&(V^2+1)(u-m_e^2-m_\mu^2)^2\\
+    \frac{1}{4}\sum_{spin} M_1 M_2^{\dagger}=2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\{&(V^2+1)(u-m_e^2-m_\mu^2)^2\\
     +&(V^2-1)(t-m_e^2-m_\mu^2)^2\\
     +&2V^2(m_e^2+m_\mu^2)s\}
     \end{split}
@@ -239,8 +261,8 @@
     % flux factor and phase space integral
     \begin{equation}
 	\begin{split}
-	\dfrac{d\sigma}{dt} & = \left(2\pi\right)^{4-6}\cdot F \cdot \int \mathrm{d}\underset{2\to2}{PS} \cdot \dfrac{1}{4}\sum_{Spin}\lvert\mathcal{M}\rvert^2 \\ 
-	 & = \dfrac{1}{\left(2\pi\right)^{2}} \cdot \dfrac{1}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{\pi}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{1}{4}\sum_{Spin}\left\{\lvert\mathcal{M}_1\rvert^2+\lvert\mathcal{M}_2\rvert^2+2\mathcal{M}_1\mathcal{M}_2^{\dagger}\right\}
+	\dfrac{d\sigma}{dt} & = \left(2\pi\right)^{4-6}\cdot F \cdot \int \mathrm{d}\underset{2\to2}{PS} \cdot \dfrac{1}{4}\sum_{spin}\lvert M\rvert^2 \\ 
+	 & = \dfrac{1}{\left(2\pi\right)^{2}} \cdot \dfrac{1}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{\pi}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{1}{4}\sum_{spin}\left\{\lvert M_1\rvert^2+\lvert M_2\rvert^2+2 M_1 M_2^{\dagger}\right\}
 	\end{split}
 	\end{equation}
 
@@ -266,48 +288,48 @@
     % QUESTA SEZIONE VA COMPLETATA SOLO NEL CASO IN CUI FOSSE NECESSARIO COPRIRE ANCORA DELLO SPAZIO
     % -----------------------------------------------------------------------------------------------
 
-    % \section{\centering\textsc{L'ampiezza del diagramma con linea interna di Higgs} } % Caratteristiche di interazione con scalare
+    \section{\centering\textsc{L'ampiezza del diagramma con linea interna di Higgs} } % Caratteristiche di interazione con scalare
 
-    % % Higgs-boson contribution
-    % \begin{fmffile}{higgs}
-    %     \begin{equation*}
-    %     \begin{gathered}
-    %     \begin{fmfgraph*}(60,30)
-    %         \fmfleft{i1,i2}
-    %         \fmfright{o1,o2}
-    %         \fmflabel{$e^-$}{i1}
-    %         \fmflabel{$e^+$}{i2}
-    %         \fmflabel{$\mu^-$}{o1}
-    %         \fmflabel{$\mu^+$}{o2}
-    %         \fmf{dashes,label=$H$}{v1,v2}
-    %         \fmf{fermion}{i1,v1}
-    %         \fmf{fermion}{v1,i2}
-    %         \fmf{fermion}{v2,o1}
-    %         \fmf{fermion}{o2,v2}
-    %         % Momentum arrows
-    %         \marrow{m}{left}{lft}{$p_1$}{i1,v1}
-    %         \marrow{n}{left}{lft}{$p_2$}{i2,v1}
-    %         \marrow{o}{up}{top}{$p_1+p_2$}{v1,v2}
-    %         \marrow{p}{right}{rt}{$p_3$}{v2,o1}
-    %         \marrow{q}{right}{rt}{$p_4$}{v2,o2}
-    %     \end{fmfgraph*}
-    %     \end{gathered} \ \ \ \Longrightarrow\mathcal{M}_H=\left(\frac{ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)
-    %     \end{equation*}
-    % \end{fmffile}
+    % Higgs-boson contribution
+    \begin{fmffile}{higgs}
+        \begin{equation}
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmflabel{$e^-$}{i1}
+            \fmflabel{$e^+$}{i2}
+            \fmflabel{$\mu^-$}{o1}
+            \fmflabel{$\mu^+$}{o2}
+            \fmf{dashes,label=$H$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+            % Momentum arrows
+            \marrow{m}{left}{lft}{$p_1$}{i1,v1}
+            \marrow{n}{left}{lft}{$p_2$}{i2,v1}
+            \marrow{o}{up}{top}{$p_1+p_2$}{v1,v2}
+            \marrow{p}{right}{rt}{$p_3$}{v2,o1}
+            \marrow{q}{right}{rt}{$p_4$}{v2,o2}
+        \end{fmfgraph*}
+        \end{gathered} \ \ \ \Longrightarrow M_H=\left(\frac{ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)
+        \end{equation}
+    \end{fmffile}
 
-    % % HIGGS -> Mandelstam (spin averaged) modulus squared of amplitude
-    % \begin{equation}
-    % \begin{split}
-    % \frac{1}{4}\sum_{Spin}\lvert\mathcal{M}_H\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
-    %  -&2(m_e^2+m_\mu^2)s+8m_e^2m_\mu^2\}
-    % \end{split}
-    % \end{equation}
+    % HIGGS -> Mandelstam (spin averaged) modulus squared of amplitude
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{spin}\lvert M_H\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
+     -&2(m_e^2+m_\mu^2)s+8m_e^2m_\mu^2\}
+    \end{split}
+    \end{equation}
 
     \nocite{sterman}
     \nocite{veltman}
     %\nocite{bjorkendrell}
     %\nocite{peskinschroeder}
-    \nocite{pdg}
+    %\nocite{pdg}
     \medskip
 
     \printbibliography
