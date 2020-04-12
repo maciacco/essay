@@ -69,9 +69,7 @@
     \begin{abstract}
     In questo \textit{essay} si sono calcolati i termini d'interazione fermione-antifermione-scalare nel Modello Standard necessari per il calcolo
     completo dell'ampiezza del processo ed è verificata l'invarianza di gauge dell'elemento di matrice $S$ all'ordine perturbativo più basso.
-    Viene poi presentato il calcolo della sezione d'urto differenziale in cui si trascurano i contributi dell'interazione con il campo scalare.
-    % TENERE SOLO SE NECESSARIO
-    In conclusione si calcola l'ampiezza relativa al diagramma con linea del campo di Higgs come esempio di interazione fermione-scalare.
+    Viene poi presentato il calcolo della sezione d'urto differenziale.
     \end{abstract}
 
     \unitlength = 0.5mm % Feynman diagrams dimensions
@@ -133,12 +131,12 @@
     \section{\centering\textsc{L'indipendenza dell'elemento di matrice \textit{S} dalla scelta di gauge} } % verificata per il diagramma ad albero, quindi solo per un ordine perturbativo
     La teoria che si sta considerando è una teoria di gauge, pertanto la sua quantizzazione richiede l'introduzione di un termine \textit{gauge fixing} secondo il metodo di Faddeev-Popov. In analogia a quanto sviluppato per il modello di Higgs abeliano,
     è possibile introdurre una condizione dipendente da un parametro $\xi$ e definire così la famiglia di gauge $R_\xi$. In questo caso $\phi^0$ è il campo non fisico, presente nello spettro della teoria con $\xi$ di valore generico, associato al campo $Z_\mu$.
-    In generale, quindi, data la lagrangiana d'interazione complessiva $\mathcal{L}_{int}=\mathcal{L}_{nc}+\mathcal{L}_{sf}$, si isolano i seguenti diagrammi di Feynman indipendenti all'ordine $O(e^2)\sim O(g^2)$ (essendo $e=g\sin\theta_W$)
+    In generale, quindi, data la lagrangiana d'interazione complessiva $\mathcal{L}_{int}=\mathcal{L}_{nc}+\mathcal{L}_{sf}$, si isolano i seguenti diagrammi di Feynman indipendenti all'ordine $O(g^2)$ ($\sim O(e^2)$, essendo $e=g\sin\theta_W$) dello sviluppo perturbativo
+    dell'elemento di matrice $S$
 
     \smallskip
-    \scriptsize
     \begin{fmffile}{amplFull}
-        \begin{equation}
+        \begin{equation}\label{Diagrams}
         \begin{gathered}
         \begin{fmfgraph*}(60,30)
             \fmfleft{i1,i2}
@@ -200,11 +198,11 @@
     In analogia ai risultati del calcolo nel modello di Higgs abeliano, si possono esprimere i propagatori dei campi $Z_\mu$ e $\phi^0$ nello spazio degli impulsi come
     % Propagators in general R_xi gauge
     \begin{equation}
-    iG_F^{\mu\nu}(p)=\frac{-i}{p^2-M_Z^2}\left\{g^{\mu\nu}-(1-\xi^2)\frac{p^\mu p^\nu}{p^2-\xi^2M_Z^2}\right\};\ \ \ \ \ i\Delta_F(p)=\frac{i}{p^2-\xi^2M_Z^2}
+    iG_{F,Z}^{\mu\nu}(p)=\frac{-i}{(2\pi)^4}\frac{1}{p^2-M_Z^2}\left\{g^{\mu\nu}-(1-\xi^2)\frac{p^\mu p^\nu}{p^2-\xi^2M_Z^2}\right\};\ \ \ \ \ i\Delta_{F,\phi}(p)=\frac{i}{(2\pi)^4}\frac{1}{p^2-\xi^2M_Z^2}
     \end{equation}
     % inserire riferimento alla conservazione dell'impulso
     Data la dipendenza da $\xi$ dei propagatori, sia $M_2$ sia $M_3$ dipendono dal valore di $\xi$. Affinché la teoria sia consistente, si deve verificare l'indipendenza dell'elemento di matrice $S$ dalla scelta del gauge.
-    Si considera quindi la somma di questi due termini e in particolare si isolano le parti dipendenti dal parametro $\xi$
+    Si considera quindi la somma di questi due termini e in particolare si isolano le parti dipendenti dal parametro $\xi$. Si trascurano i fattori $(2\pi)^4$ presenti nei vertici e nei propagatori.
     % M2+M3 - first considerations -> only considering gauge dependent terms
     \begin{equation}\label{M2M3xiparts1}
     \begin{split}
@@ -225,85 +223,40 @@
     Si elimina la dipendenza dai termini di accoppiamento vettoriale e si può mettere in evidenza un fattore $m_em_\mu$ comune anche a $M_3$. In $M_3$ si può utilizzare la relazione $M_W=cM_Z$ che lega le masse dei bosoni $W^\pm$ e $Z$. La somma dei due contributi è infine
     esprimibile come
     % Gauge invariance proof
-    \begin{equation}
+    \begin{equation}\label{proofGauge}
     \begin{split}
     M_2+M_3\Rightarrow\left(\frac{g}{4c}\right)^2\frac{4im_e m_\mu}{s-\xi^2M_Z^2}\left\{\frac{M_Z^2-\xi^2M_Z^2+s-M_Z^2}{M_Z^2(s-M_Z^2)}\right\}\bar{v}(p_1)\gamma^5u(p_2)\bar{u}(p_3)\gamma^5v(p_4)
     \end{split}
     \end{equation}
     Il numeratore in parentesi è uguale al denominatore ad esso precedente e questi sono gli unici termini dipendenti dal parametro $\xi$. Si verifica pertanto a quest'ordine perturbativo l'indipendenza dalla scelta di $\xi$. Si osserva inoltre che
-    il termine ottenuto con queste manipolazioni corrisponde all'elemento $M_3$ che si calcolerebbe con la scelta di gauge normalizzabile $\xi=1$ o alternativamente, riutilizzando le equazioni di Dirac, al termine di $M_2$ dovuto alla parte in
+    il termine ottenuto nell'espressione (\ref{proofGauge}) corrisponde all'elemento $M_3$ che si calcolerebbe con la scelta di gauge normalizzabile $\xi=1$ o alternativamente, riutilizzando le equazioni di Dirac, al termine di $M_2$ dovuto alla parte in
     $p^\mu p^\nu/M_Z^2$ del propagatore del campo $Z_\mu$ nel gauge unitario ($\xi\to\infty$).
 
     \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak INSERIRE A QUESTO PUNTO LE CONSIDERAZIONI SULL'ACCOPPIAMENTO CON IL CAMPO SCALARE
-    Si procede nel calcolo dell'elemento di matrice $S$ scegliendo $\xi=1$. Si trascurano inoltre i diagrammi relativi ai contributi dei campi scalari. Tale approssimazione è giustificata dal valore della costante d'accoppiamento di Yukawa:
-    questa infatti è proporzionale alla costante adimensionale $g$ attraverso il rapporto $m_j/M_W$. Considerando elettroni e muoni, si verifica che $m_e/M_W<m_\mu/M_W\simeq 10^{-3}$. Poiché tale costante è presente elevata al quadrato nei termini d'interferenza di $M_3$ e $M_4$ con
-    $M_1$ e $M_2$ e alla quarta potenza negli altri termini del calcolo di $\lvert M\rvert^2$, il contributo apportato incide in misura minima sul calcolo dell'elemento di matrice $S$.
-    % QED contribution
-    \begin{fmffile}{gamma}
-        \begin{equation}
-        \begin{gathered}
-        \begin{fmfgraph*}(60,30)
-            \fmfleft{i1,i2}
-            \fmfright{o1,o2}
-            \fmflabel{$e^-$}{i1}
-            \fmflabel{$e^+$}{i2}
-            \fmflabel{$\mu^-$}{o1}
-            \fmflabel{$\mu^+$}{o2}
-            \fmf{photon,label=$\gamma$}{v1,v2}
-            \fmf{fermion}{i1,v1}
-            \fmf{fermion}{v1,i2}
-            \fmf{fermion}{v2,o1}
-            \fmf{fermion}{o2,v2}
-            % Momentum arrows
-            \marrow{a}{left}{lft}{$p_1$}{i1,v1}
-            \marrow{b}{left}{lft}{$p_2$}{i2,v1}
-            \marrow{c}{up}{top}{$p_1+p_2$}{v1,v2}
-            \marrow{d}{right}{rt}{$p_3$}{v2,o1}
-            \marrow{e}{right}{rt}{$p_4$}{v2,o2}
-        \end{fmfgraph*}
-        \end{gathered} \ \ \ \Longrightarrow M_1=\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)
-        \end{equation}
-    \end{fmffile}
+    Si procede nel calcolo dell'elemento di matrice $S$ scegliendo $\xi=1$. Si riportano i valori di $M_i$ relativi ai diagrammi (\ref{Diagrams}). I propagatori del fotone e del campo di Higgs fisico $H$ sono rispettivamente
+    $iG_{F,A}^{\mu\nu}(k)=-ig^{\mu\nu}/k^2$ e $i\Delta_{F,H}(p)=i/(p^2-M_H^2)$, data $M_H$ la massa del bosone di Higgs.
+    \begin{align}
+    M_1=&\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)\\
+    M_2=&\left(\frac{ig}{4c}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)\\
+    M_3=&\left(\frac{g}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)\gamma^5u(p_2)\frac{i}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^5v(p_4)\\
+    M_4=&\left(\frac{-ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)
+    \end{align}
 
+    \subsection*{Il termine di QED}
+    Poiché si è interessati alla sezione d'urto non polarizzata, si somma sullo spin dei fermioni uscenti e si media sullo spin dei fermioni entranti la quantità $\lvert M_1\rvert^2$, ottenendo
     % QED: (spin averaged) modulus squared of amplitude
-    % \begin{equation}
-    % \begin{split}
-    % \frac{1}{4}\sum_{spin}\lvert M_1\rvert^2=\frac{1}{4}e^4\frac{1}{(p_1+p_2)^2}&\mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^\nu(\slashed{p}_1-m_e)\gamma^\mu\} \\
-    %  \times&\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma_\nu(\slashed{p}_3+m_\mu)\gamma_\mu\}
-    % \end{split}
-    % \end{equation}
-
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{spin}\lvert M_1\rvert^2=\frac{1}{4}e^4\frac{1}{(p_1+p_2)^2}&\mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^\nu(\slashed{p}_1-m_e)\gamma^\mu\} \\
+     \times&\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma_\nu(\slashed{p}_3+m_\mu)\gamma_\mu\}
+    \end{split}
+    \end{equation}
+    Svolgendo l'algebra delle tracce di matrici di Dirac ed esprimendo il risultato in termini degli invarianti di Mandelstam $s$, $t$ e $u$ si ottiene
     % QED -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
     \frac{1}{4}\sum_{spin}\lvert M_1\rvert^2=\frac{2e^4}{s^2}\{(u-m_e^2-m_\mu^2)^2+(t-m_e^2-m_\mu^2)^2+2(m_e^2+m_\mu^2)s\}
     \end{equation}
-
-    % Z-boson contribution (WEAK)
-    \begin{fmffile}{zee}
-        \begin{equation}
-        \begin{gathered}
-        \begin{fmfgraph*}(60,30)
-            \fmfleft{i1,i2}
-            \fmfright{o1,o2}
-            \fmflabel{$e^-$}{i1}
-            \fmflabel{$e^+$}{i2}
-            \fmflabel{$\mu^-$}{o1}
-            \fmflabel{$\mu^+$}{o2}
-            \fmf{vanilla,label=$Z$}{v1,v2}
-            \fmf{fermion}{i1,v1}
-            \fmf{fermion}{v1,i2}
-            \fmf{fermion}{v2,o1}
-            \fmf{fermion}{o2,v2}
-            % Momentum arrows
-            \marrow{f}{left}{lft}{$p_1$}{i1,v1}
-            \marrow{g}{left}{lft}{$p_2$}{i2,v1}
-            \marrow{h}{up}{top}{$p_1+p_2$}{v1,v2}
-            \marrow{i}{right}{rt}{$p_3$}{v2,o1}
-            \marrow{l}{right}{rt}{$p_4$}{v2,o2}
-        \end{fmfgraph*}
-        \end{gathered} \ \ \ \Longrightarrow M_2=\left(\frac{ig}{4c}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)
-        \end{equation}
-    \end{fmffile}
+    \subsection*{Il termine d'interazione debole}
 
     % WEAK -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
@@ -315,6 +268,18 @@
     \end{split}
     \end{equation}
 
+    \subsection*{Il contributo del campo scalare: $\phi^0$}
+
+    \subsection*{Il contributo del campo scalare: $H$}
+    % HIGGS -> Mandelstam (spin averaged) modulus squared of amplitude
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{spin}\lvert M_H\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
+     -&2(m_e^2+m_\mu^2)s+8m_e^2m_\mu^2\}
+    \end{split}
+    \end{equation}
+
+    \subsection*{I termini d'interferenza}
     % WEAK x QED -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
     \begin{split}
@@ -352,46 +317,6 @@
     \end{equation}
 
 
-    % -----------------------------------------------------------------------------------------------
-    % QUESTA SEZIONE VA COMPLETATA SOLO NEL CASO IN CUI FOSSE NECESSARIO COPRIRE ANCORA DELLO SPAZIO
-    % -----------------------------------------------------------------------------------------------
-
-    \section{\centering\textsc{L'ampiezza del diagramma con linea interna di Higgs} } % Caratteristiche di interazione con scalare
-
-    % Higgs-boson contribution
-    \begin{fmffile}{higgs}
-        \begin{equation}
-        \begin{gathered}
-        \begin{fmfgraph*}(60,30)
-            \fmfleft{i1,i2}
-            \fmfright{o1,o2}
-            \fmflabel{$e^-$}{i1}
-            \fmflabel{$e^+$}{i2}
-            \fmflabel{$\mu^-$}{o1}
-            \fmflabel{$\mu^+$}{o2}
-            \fmf{dashes,label=$H$}{v1,v2}
-            \fmf{fermion}{i1,v1}
-            \fmf{fermion}{v1,i2}
-            \fmf{fermion}{v2,o1}
-            \fmf{fermion}{o2,v2}
-            % Momentum arrows
-            \marrow{m}{left}{lft}{$p_1$}{i1,v1}
-            \marrow{n}{left}{lft}{$p_2$}{i2,v1}
-            \marrow{o}{up}{top}{$p_1+p_2$}{v1,v2}
-            \marrow{p}{right}{rt}{$p_3$}{v2,o1}
-            \marrow{q}{right}{rt}{$p_4$}{v2,o2}
-        \end{fmfgraph*}
-        \end{gathered} \ \ \ \Longrightarrow M_H=\left(\frac{ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)
-        \end{equation}
-    \end{fmffile}
-
-    % HIGGS -> Mandelstam (spin averaged) modulus squared of amplitude
-    \begin{equation}
-    \begin{split}
-    \frac{1}{4}\sum_{spin}\lvert M_H\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
-     -&2(m_e^2+m_\mu^2)s+8m_e^2m_\mu^2\}
-    \end{split}
-    \end{equation}
 
     \nocite{sterman}
     \nocite{veltman}
