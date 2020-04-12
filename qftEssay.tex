@@ -67,7 +67,7 @@
     %-----------------------------------------------------------------
 
     \begin{abstract}
-    In questo \textit{essay} sono calcolati i termini d'interazione fermione-antifermione-scalare nel Modello Standard necessari per il calcolo
+    In questo \textit{essay} si sono calcolati i termini d'interazione fermione-antifermione-scalare nel Modello Standard necessari per il calcolo
     completo dell'ampiezza del processo ed è verificata l'invarianza di gauge dell'elemento di matrice $S$ all'ordine perturbativo più basso.
     Viene poi presentato il calcolo della sezione d'urto differenziale in cui si trascurano i contributi dell'interazione con il campo scalare.
     % TENERE SOLO SE NECESSARIO
@@ -82,12 +82,12 @@
     \section{\centering\textsc{Introduzione} } % Cioè l'ultima sezione da scrivere
     Le interazioni elettrodeboli sono descritte in modo unificato nella lagrangiana con gruppo di simmetria $SU(2)\times U(1)$. In tale modello, i leptoni interagiscono con i quattro campi di gauge 
     $W^\pm_\mu$, $Z_\mu$ e $A_\mu$, e con il doppietto scalare complesso $\Phi$ necessario per l'introduzione dei termini di massa. Nel caso particolare del processo $e^+e^-\to\mu^+\mu^-$, all'ordine più basso in teoria delle perturbazioni, 
-    la parte di lagrangiana d'interazione da considerare è formata da due contributi separati. Il primo è il termine di correnti neutre
+    la parte di lagrangiana d'interazione $\mathcal{L}_{int}$ da considerare è formata da due contributi separati. Il primo è il termine di correnti neutre
     % neutral current lagrangian for electron and muon
     \begin{equation}
     \mathcal{L}_{nc}=\sum_{i=e,\mu}\left\{\frac{g}{4\cos\theta_W}\bar{\ell}_i\gamma^\mu(4\sin^2\theta_W-1+\gamma^5)\ell_iZ_\mu-e\bar{\ell}_i\gamma^\mu\ell_iA_\mu\right\}
     \end{equation}
-    da cui si estrae il vertice a tre linee con il campo $Z_\mu$ (risp. $A_\mu$) e la coppia leptone-antileptone, di valore $i(g/4c)\gamma^\mu(V+\gamma^5)$ (risp. $-ie\gamma^\mu$). Si è posto $c\equiv\cos\theta_W$ e $V\equiv4\sin^2\theta_W+1$.
+    da cui si estrae il vertice a tre linee con il campo $Z_\mu$ (risp. $A_\mu$) e la coppia leptone-antileptone, di valore $(2\pi)^4i(g/4c)\gamma^\mu(V+\gamma^5)$ (risp. $-(2\pi)^4ie\gamma^\mu$) nello spazio degli impulsi. Si è posto $c\equiv\cos\theta_W$ e $V\equiv4\sin^2\theta_W+1$.
     Il secondo contributo è dato dall'interazione dei campi dell'elettrone e del muone con le componenti del campo $\Phi$.
 
     % --------------------------------------
@@ -100,7 +100,8 @@
     \mathcal{L}_s=\left(D_\mu\Phi\right)^\dagger D^\mu\Phi-\frac{\lambda}{4!}\left(\lvert\Phi\rvert^2-F^2\right)^2, \ \ \ \ \lambda>0\ \mathrm{e} \ F\neq0
     \end{equation}
     dove $D_\mu$ è la derivata covariante in termini dei campi di gauge e dei generatori del gruppo di simmetria. La costante $F$ determina il valore di aspettazione sul vuoto del campo $\Phi$, classicamente corrispondente
-    al valore assunto da $\lvert\Phi\rvert$ nel minimo del potenziale. Si parametrizza $\Phi$ in termini di $F$ e se ne esprime la seconda componente attraverso una combinazione del campo fisico di Higgs $H$ e del campo $\phi^0$
+    al valore assunto da $\lvert\Phi\rvert$ nel minimo del potenziale. Si parametrizza $\Phi$ in termini di $F$ e se ne esprime la seconda componente attraverso una combinazione del campo fisico di Higgs $H$ e del campo $\phi^0$.
+    Il fattore $2^{-\frac{1}{2}}$ permette di ottenere i corretti termini cinetici per i campi reali
     % Scalar field definition in terms of Higgs and phi0
     \begin{equation}\label{PhiParameterization}
     \Phi=\begin{pmatrix}0 \\F\end{pmatrix}+\begin{pmatrix}\phi_1 \\\phi_2\end{pmatrix}=\begin{pmatrix}0\\F\end{pmatrix}+\frac{1}{\sqrt{2}}\begin{pmatrix}\sqrt{2}\phi_1 \\H+i\phi^0\end{pmatrix}
@@ -112,48 +113,108 @@
     \end{equation}
     dove $y_j$ è la costante di accoppiamento di Yukawa, proporzionale al rapporto tra la massa $m_j$ del fermione e la massa $M_W$ dei bosoni $W^\pm$
     % Yukawa coupling constant
-    \begin{equation}
+    \begin{equation}\label{YukawaConstant}
     y_j=\frac{1}{\sqrt{2}}g\frac{m_j}{M_W}
     \end{equation}
     I campi fermionici sono introdotti in (\ref{YukawaCouplings}) con $\bar{\psi}_{j,L}=2^{-1}\left(\bar{\nu}_j,\bar{\ell}_j\right)(1+\gamma^5)$ e $\psi_{j,R}=2^{-1}(1+\gamma^5)\ell_{j}$.
-    Inserendo la parametrizzazione (\ref{PhiParameterization}) nella lagrangiana d'interazione (\ref{YukawaCouplings}) si esplicitano i termini di lagrangiana d'interazione per i singoli campi
+    Inserendo la parametrizzazione (\ref{PhiParameterization}) nella lagrangiana d'interazione (\ref{YukawaCouplings}), isolando la seconda componente del doppietto,
+    si esplicitano i termini di lagrangiana d'interazione per i singoli campi.
     % Computation of scalar-lepton vertices
     \begin{equation}
     \begin{split}
-    \mathcal{L}_{sf}\Longrightarrow\ &\frac{y_j}{\sqrt{2}}\begin{pmatrix}\bar{\nu}_{j} & \bar{\ell}_{j}\end{pmatrix}\left(\frac{1+\gamma^5}{2}\right)\begin{pmatrix}-\\ \sqrt{2}F+H+i\phi^0\end{pmatrix}\left(\frac{1+\gamma^5}{2}\right)\ell_j+h.c.\\
-    =&y_j\bar{\ell}_jF\ell_j+\frac{y_j}{\sqrt{2}}\bar{\ell}_j H \ell_j+i\frac{y_j}{\sqrt{2}}\bar{\ell}_j \gamma^5\phi^0 \ell_j
+    \mathcal{L}_{sf}\Longrightarrow\ \ -&\frac{y_j}{\sqrt{2}}\begin{pmatrix}\bar{\nu}_{j} & \bar{\ell}_{j}\end{pmatrix}\left(\frac{1+\gamma^5}{2}\right)\begin{pmatrix}-\\ \sqrt{2}F+H+i\phi^0\end{pmatrix}\left(\frac{1+\gamma^5}{2}\right)\ell_j\\
+    -&\frac{y_j}{\sqrt{2}}\bar{\ell}_j\left(\frac{1-\gamma^5}{2}\right)\begin{pmatrix} \ - &\sqrt{2}F+H-i\phi^0\ \end{pmatrix}\left(\frac{1-\gamma^5}{2}\right)\begin{pmatrix} \nu_j\\ \ell_j \end{pmatrix}\\
+    =-&y_j\bar{\ell}_jF\ell_j-\frac{y_j}{\sqrt{2}}\bar{\ell}_j H \ell_j-i\frac{y_j}{\sqrt{2}}\bar{\ell}_j \gamma^5\phi^0 \ell_j
     \end{split}
     \end{equation}
+    Il primo termine è responsabile della massa dei fermioni. I termini d'interazione relativi rispettivamente a $H$ e $\phi^0$ sono dati dal prodotto di campi non equivalenti, pertanto i vertici corrispondenti si deducono in modo diretto dalla lagrangiana.
+    Utilizzando l'espressione (\ref{YukawaConstant}) per la costante di accoppiamento, si ottengono rispettivamente i valori $-(2\pi)^4i[2^{-1}g(m_j/M_W)]$ e $(2\pi)^42^{-1}g(m_j/M_W)\gamma^5$ nello spazio degli impulsi.
 
+    \section{\centering\textsc{L'indipendenza dell'elemento di matrice \textit{S} dalla scelta di gauge} } % verificata per il diagramma ad albero, quindi solo per un ordine perturbativo
+    La teoria che si sta considerando è una teoria di gauge, pertanto la sua quantizzazione richiede l'introduzione di un termine \textit{gauge fixing} secondo il metodo di Faddeev-Popov. In analogia a quanto sviluppato per il modello di Higgs abeliano,
+    è possibile introdurre una condizione dipendente da un parametro $\xi$ e definire così la famiglia di gauge $R_\xi$. In questo caso $\phi^0$ è il campo non fisico, presente nello spettro della teoria con $\xi$ di valore generico, associato al campo $Z_\mu$.
+    In generale, quindi, data la lagrangiana d'interazione complessiva $\mathcal{L}_{int}=\mathcal{L}_{nc}+\mathcal{L}_{sf}$, si isolano i seguenti diagrammi di Feynman indipendenti all'ordine $O(e^2)\sim O(g^2)$ (essendo $e=g\sin\theta_W$)
 
-    % muon-to-W mass ratio
-    \begin{equation}
-    \frac{m_{\mu}}{M_W}\simeq 10^{-3}
-    \end{equation}
+    \smallskip
+    \scriptsize
+    \begin{fmffile}{amplFull}
+        \begin{equation}
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmflabel{$e^-$}{i1}
+            \fmflabel{$e^+$}{i2}
+            \fmflabel{$\mu^-$}{o1}
+            \fmflabel{$\mu^+$}{o2}
+            \fmf{photon,label=$\gamma$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+        \end{fmfgraph*}
+        \end{gathered}+
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmf{vanilla,label=$Z$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+        \end{fmfgraph*}
+        \end{gathered}+
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmf{dashes,label=$\phi^0$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+        \end{fmfgraph*}
+        \end{gathered}+
+        \begin{gathered}
+        \begin{fmfgraph*}(60,30)
+            \fmfleft{i1,i2}
+            \fmfright{o1,o2}
+            \fmf{dashes,label=$H$}{v1,v2}
+            \fmf{fermion}{i1,v1}
+            \fmf{fermion}{v1,i2}
+            \fmf{fermion}{v2,o1}
+            \fmf{fermion}{o2,v2}
+        \end{fmfgraph*}
+        \end{gathered}
+        \end{equation}
+    \end{fmffile}
 
-
-    \section{\centering\textsc{L'invarianza di gauge dell'elemento di matrice \textit{S}} } % verificata per il diagramma ad albero, quindi solo per un ordine perturbativo
-
+    \normalsize
+    Per calcolare l'elemento di matrice $S$ si parte dal calcolo dell'ampiezza, in cui si media sullo spin dei fermioni entranti e si somma sullo spin dei fermioni uscenti
     % Full tree-level amplitude
     \begin{equation}
-    \lvert M\rvert^2=\lvert M_1+ M_2+ M_3+ M_4\rvert^2
+    \frac{1}{4}\sum_{spin}\lvert M\rvert^2=\frac{1}{4}\sum_{spin}\lvert M_1+ M_2+ M_3+ M_4\rvert^2
     \end{equation}
-
+    dove gli indici degli elementi $M_i$ si riferiscono ai diagrammi precedenti nell'ordine con cui sono riportati.
+    In analogia ai risultati del calcolo nel modello di Higgs abeliano, si possono esprimere i propagatori dei campi $Z_\mu$ e $\phi^0$ nello spazio degli impulsi come
     % Propagators in general R_xi gauge
     \begin{equation}
     iG_F^{\mu\nu}(p)=\frac{-i}{p^2-M_Z^2}\left\{g^{\mu\nu}-(1-\xi^2)\frac{p^\mu p^\nu}{p^2-\xi^2M_Z^2}\right\};\ \ \ \ \ i\Delta_F(p)=\frac{i}{p^2-\xi^2M_Z^2}
     \end{equation}
-
     % inserire riferimento alla conservazione dell'impulso
-
+    Data la dipendenza da $\xi$ dei propagatori, sia $M_2$ sia $M_3$ dipendono dal valore di $\xi$. Affinché la teoria sia consistente, si deve verificare l'indipendenza dell'elemento di matrice $S$ dalla scelta del gauge.
+    Si considera quindi la somma di questi due termini e in particolare si isolano le parti dipendenti dal parametro $\xi$
     % M2+M3 - first considerations -> only considering gauge dependent terms
-    \begin{equation}
+    \begin{equation}\label{M2M3xiparts1}
     \begin{split}
      M_2+ M_3\Rightarrow -&\left(\frac{g}{4c}\right)^2 \frac{i(1-\xi^2)}{s^2-M_Z^2}\frac{(p_1+p_2)^\mu(p_3+p_4)^\nu}{s-\xi^2 M_Z^2}\bar{v}(p_1)\gamma_\mu(V+\gamma^5)u(p_2)\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4)\\
     +&\left(\frac{g}{2}\right)^2\frac{m_e m_\mu}{M_W^2}\frac{i}{s-\xi^2M_Z^2}\bar{v}(p_1)\gamma^5u(p_2)\bar{u}(p_3)\gamma^5v(p_4)
     \end{split}
     \end{equation}
-
+    In (\ref{M2M3xiparts1}) si sono associati i quadrimpulsi $p_i$ ($i=1,\dots,4$) alle linee esterne del diagramma e si è applicata la conservazione del quadrimpulso nei vertici interni del diagramma. Si è inoltre utilizzato l'invariante di Mandelstam $s=(p_1+p_2)^2$
+    per il quadrato del quadrimpulso associato alle linee interne. Considerando esclusivamente il termine $M_2$ è possibile utilizzare le equazioni di Dirac $\slashed{p}u(p)=mu(p)$ e $\slashed{p}v(p)=-mv(p)$ e quelle rispettive per gli spinori $\bar{u}(p)$ e $\bar{v}(p)$
+    per eliminare i quadrimpulsi $p_i$ nell'espressione (\ref{M2M3xiparts1}) ed esplicitare la dipendenza dalle masse $m_e$ e $m_\mu$ rispettivamente dell'elettrone e del muone
     % M2 - Dirac equation applied
     \begin{equation}
     \begin{split}
@@ -161,18 +222,22 @@
     \times &m_\mu[\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4)-\bar{u}(p_3)\gamma_\nu(V-\gamma^5)v(p_4)]\Big. \Big\}
     \end{split}
     \end{equation}
-
+    Si elimina la dipendenza dai termini di accoppiamento vettoriale e si può mettere in evidenza un fattore $m_em_\mu$ comune anche a $M_3$. In $M_3$ si può utilizzare la relazione $M_W=cM_Z$ che lega le masse dei bosoni $W^\pm$ e $Z$. La somma dei due contributi è infine
+    esprimibile come
     % Gauge invariance proof
     \begin{equation}
     \begin{split}
     M_2+M_3\Rightarrow\left(\frac{g}{4c}\right)^2\frac{4im_e m_\mu}{s-\xi^2M_Z^2}\left\{\frac{M_Z^2-\xi^2M_Z^2+s-M_Z^2}{M_Z^2(s-M_Z^2)}\right\}\bar{v}(p_1)\gamma^5u(p_2)\bar{u}(p_3)\gamma^5v(p_4)
     \end{split}
     \end{equation}
+    Il numeratore in parentesi è uguale al denominatore ad esso precedente e questi sono gli unici termini dipendenti dal parametro $\xi$. Si verifica pertanto a quest'ordine perturbativo l'indipendenza dalla scelta di $\xi$. Si osserva inoltre che
+    il termine ottenuto con queste manipolazioni corrisponde all'elemento $M_3$ che si calcolerebbe con la scelta di gauge normalizzabile $\xi=1$ o alternativamente, riutilizzando le equazioni di Dirac, al termine di $M_2$ dovuto alla parte in
+    $p^\mu p^\nu/M_Z^2$ del propagatore del campo $Z_\mu$ nel gauge unitario ($\xi\to\infty$).
 
-
-    \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak
-
-
+    \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak INSERIRE A QUESTO PUNTO LE CONSIDERAZIONI SULL'ACCOPPIAMENTO CON IL CAMPO SCALARE
+    Si procede nel calcolo dell'elemento di matrice $S$ scegliendo $\xi=1$. Si trascurano inoltre i diagrammi relativi ai contributi dei campi scalari. Tale approssimazione è giustificata dal valore della costante d'accoppiamento di Yukawa:
+    questa infatti è proporzionale alla costante adimensionale $g$ attraverso il rapporto $m_j/M_W$. Considerando elettroni e muoni, si verifica che $m_e/M_W<m_\mu/M_W\simeq 10^{-3}$. Poiché tale costante è presente elevata al quadrato nei termini d'interferenza di $M_3$ e $M_4$ con
+    $M_1$ e $M_2$ e alla quarta potenza negli altri termini del calcolo di $\lvert M\rvert^2$, il contributo apportato incide in misura minima sul calcolo dell'elemento di matrice $S$.
     % QED contribution
     \begin{fmffile}{gamma}
         \begin{equation}
@@ -333,6 +398,7 @@
     %\nocite{bjorkendrell}
     %\nocite{peskinschroeder}
     %\nocite{pdg}
+    \nocite{appunti}
     \medskip
 
     \printbibliography

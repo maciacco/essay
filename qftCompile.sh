@@ -5,6 +5,7 @@
 pdflatex qftEssay
 
 # run metapost (add Feynman' diagrams name here)
+mpost amplFull
 mpost gamma
 mpost zee
 mpost higgs
