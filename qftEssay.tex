@@ -316,49 +316,41 @@
     \end{equation}
     % PHI0 x WEAK
     \begin{equation}
-    \frac{1}{4}\sum_{spin} M_3 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_3^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\frac{e^2}{(s-M_Z^2)^2}\{ (u-m_e^2-m_\mu^2)+(t-m_e^2-m_\mu^2) \}
+    \frac{1}{4}\sum_{spin} M_3 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_3^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c}\right)^2\frac{1}{(s-M_Z^2)^2}\{ (u-m_e^2-m_\mu^2)+(t-m_e^2-m_\mu^2) \}
     \end{equation}
     % HIGGS x WEAK
     \begin{equation}
-    \frac{1}{4}\sum_{spin} M_4 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_4^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\frac{e^2}{(s-M_Z^2)(s-M_H^2)}\{ (u-m_e^2-m_\mu^2)-(t-m_e^2-m_\mu^2) \}
+    \frac{1}{4}\sum_{spin} M_4 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_4^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c}\right)^2\frac{1}{(s-M_Z^2)(s-M_H^2)}\{ (u-m_e^2-m_\mu^2)-(t-m_e^2-m_\mu^2) \}
     \end{equation}
-
-    % CINEMATICA: LE DEFINIZIONI DEGLI IMPULSI INLINE
-
+    \subsection*{Cinematica e risultati finali}
+    Per passare alla sezione d'urto, si moltiplica l'ampiezza calcolata per il fattore di flusso $F$ e per l'integrale sullo spazio delle fasi delle particelle uscenti dal processo. Si considera il sistema di riferimento del centro di massa del sistema.
     % flux factor and phase space integral
     \begin{equation}
 	\begin{split}
-	\dfrac{d\sigma}{dt} & = \left(2\pi\right)^{4-6}\cdot F \cdot \int \mathrm{d}\underset{2\to2}{PS} \cdot \dfrac{1}{4}\sum_{spin}\lvert M\rvert^2 \\ 
-	 & = \dfrac{1}{\left(2\pi\right)^{2}} \cdot \dfrac{1}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{\pi}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{1}{4}\sum_{spin}\left\{\lvert M_1\rvert^2+\lvert M_2\rvert^2+2 M_1 M_2^{\dagger}\right\}
+	\dfrac{d\sigma}{dt} = \left(2\pi\right)^{4-6}F \int \mathrm{d}\underset{2\to2}{PS}\ \dfrac{1}{4}\sum_{spin}\lvert M\rvert^2 = \dfrac{1}{\left(2\pi\right)^{2}} \cdot \dfrac{1}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{\pi}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{1}{4}\sum_{spin}\ \sum_{i,j=1}^{4} M_i M_j^{\dagger}
 	\end{split}
 	\end{equation}
-
-    % Transformation from Mandelstam invariant to che cosine of the angle of the antimuon
-    \begin{equation}
-    \frac{d\sigma}{d\cos\theta}=\frac{(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}}{2}\frac{d\sigma}{dt}
-    \end{equation}
-
+    Si passa alla sezione d'urto differenziale rispetto all'angolo $\theta$ che l'antimuone uscente forma rispetto all'asse del moto dell'elettrone esprimendo gli invarianti $t=(m_\mu^2+m_e^2+s/2-2^{-1}(s-4m_\mu^2)^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}}\cos\theta)$
+    e $u=(m_\mu^2+m_e^2-s/2-2^{-1}(s-4m_\mu^2)^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}}\cos\theta)$. Si applica la trasformazione $d\sigma/d\cos\theta=2^{-1}(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}d\sigma/dt$
     % THE cross section
     \begin{equation}
-    \resizebox{1\textwidth}{!}{
+    \resizebox{0.9\textwidth}{!}{
         $\begin{split}
     &\frac{d\sigma}{d\cos\theta}=\frac{1}{32\pi s}\left(\frac{s-4m_\mu^2}{s-4m_e^2}\right)^{\frac{1}{2}} \Bigg\{ \Bigg. \frac{e^4}{s^2}\Big\{ \Big. s^2+(s-4m_\mu^2)(s-4m_e^2)\cos^2\theta+4(m_e^2+m_\mu^2)s\Big. \Big\} \\
     +&\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\Big\{ \Big. (V^2+1)^2\left[s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta\right]+8V^2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
     +&4(V^4-1)\left[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2\right]+16m_\mu^2 m_e^2(V^2-1)^2 \Big. \Big\}\\
-    +&2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
-    +&4V^2(m_e^2+m_\mu^2) \Big. \Big\}
+    +&2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta+4V^2(m_e^2+m_\mu^2) \Big. \Big\}
     \Bigg. \Bigg\} 
         \end{split}$}
     \end{equation}
-
-
-
+    Il fattore $(s-4m_\mu^2)^{\frac{1}{2}}$ garantisce che la sezione d'urto sia definita per $\sqrt{s}\leq2m_\mu$, cioè solo quando l'energia nel sistema di riferimento del centro di massa è sufficiente per creare la massa della coppia $\mu^+\mu^-$.
+    I termini in $\cos\theta$ sono responsabili dell'asimmetria della sezione d'urto rispetto all'angolo di diffusione $\theta$.
     \nocite{sterman}
     \nocite{veltman}
     %\nocite{bjorkendrell}
     %\nocite{peskinschroeder}
     %\nocite{pdg}
-    \nocite{appunti}
+    %\nocite{appunti}
     \medskip
 
     \printbibliography
