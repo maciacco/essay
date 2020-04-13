@@ -67,9 +67,9 @@
     %-----------------------------------------------------------------
 
     \begin{abstract}
-    In questo \textit{essay} si sono calcolati i termini d'interazione fermione-antifermione-scalare nel Modello Standard necessari per il calcolo
-    completo dell'ampiezza del processo ed è verificata l'invarianza di gauge dell'elemento di matrice $S$ all'ordine perturbativo più basso.
-    Viene poi presentato il calcolo della sezione d'urto differenziale.
+    In questo \textit{essay} sono calcolati i termini d'interazione fermione-antifermione-scalare nel Modello Standard necessari per il calcolo
+    completo dell'ampiezza del processo ed è verificata l'indipendenza dalla scelta di gauge dell'elemento di matrice $S$ all'ordine perturbativo più basso.
+    $\mathrm{\grave{E}}$ infine presentato il calcolo della sezione d'urto differenziale.
     \end{abstract}
 
     \unitlength = 0.5mm % Feynman diagrams dimensions
@@ -202,7 +202,7 @@
     \end{equation}
     % inserire riferimento alla conservazione dell'impulso
     Data la dipendenza da $\xi$ dei propagatori, sia $M_2$ sia $M_3$ dipendono dal valore di $\xi$. Affinché la teoria sia consistente, si deve verificare l'indipendenza dell'elemento di matrice $S$ dalla scelta del gauge.
-    Si considera quindi la somma di questi due termini e in particolare si isolano le parti dipendenti dal parametro $\xi$. Si trascurano i fattori $(2\pi)^4$ presenti nei vertici e nei propagatori.
+    Si considera quindi la somma di questi due termini e in particolare si isolano le parti dipendenti dal parametro $\xi$. Si trascurano da qui i fattori $(2\pi)^4$ presenti nei vertici e nei propagatori.
     % M2+M3 - first considerations -> only considering gauge dependent terms
     \begin{equation}\label{M2M3xiparts1}
     \begin{split}
@@ -211,7 +211,7 @@
     \end{split}
     \end{equation}
     In (\ref{M2M3xiparts1}) si sono associati i quadrimpulsi $p_i$ ($i=1,\dots,4$) alle linee esterne del diagramma e si è applicata la conservazione del quadrimpulso nei vertici interni del diagramma. Si è inoltre utilizzato l'invariante di Mandelstam $s=(p_1+p_2)^2$
-    per il quadrato del quadrimpulso associato alle linee interne. Considerando esclusivamente il termine $M_2$ è possibile utilizzare le equazioni di Dirac $\slashed{p}u(p)=mu(p)$ e $\slashed{p}v(p)=-mv(p)$ e quelle rispettive per gli spinori $\bar{u}(p)$ e $\bar{v}(p)$
+    per esprimere il quadrato del quadrimpulso associato alle linee interne. Considerando esclusivamente il termine $M_2$ si utilizzano le equazioni di Dirac $\slashed{p}u(p)=mu(p)$ e $\slashed{p}v(p)=-mv(p)$ e quelle rispettive per gli spinori $\bar{u}(p)$ e $\bar{v}(p)$
     per eliminare i quadrimpulsi $p_i$ nell'espressione (\ref{M2M3xiparts1}) ed esplicitare la dipendenza dalle masse $m_e$ e $m_\mu$ rispettivamente dell'elettrone e del muone
     % M2 - Dirac equation applied
     \begin{equation}
@@ -220,7 +220,7 @@
     \times &m_\mu[\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4)-\bar{u}(p_3)\gamma_\nu(V-\gamma^5)v(p_4)]\Big. \Big\}
     \end{split}
     \end{equation}
-    Si elimina la dipendenza dai termini di accoppiamento vettoriale e si può mettere in evidenza un fattore $m_em_\mu$ comune anche a $M_3$. In $M_3$ si può utilizzare la relazione $M_W=cM_Z$ che lega le masse dei bosoni $W^\pm$ e $Z$. La somma dei due contributi è infine
+    Si elimina la dipendenza dai termini di accoppiamento vettoriale e si mette in evidenza un fattore $m_em_\mu$ comune anche a $M_3$. In $M_3$ si utilizza la relazione $M_W=cM_Z$ che lega le masse dei bosoni $W^\pm$ e $Z$. La somma dei due contributi è infine
     esprimibile come
     % Gauge invariance proof
     \begin{equation}\label{proofGauge}
@@ -233,16 +233,15 @@
     $p^\mu p^\nu/M_Z^2$ del propagatore del campo $Z_\mu$ nel gauge unitario ($\xi\to\infty$).
 
     \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak INSERIRE A QUESTO PUNTO LE CONSIDERAZIONI SULL'ACCOPPIAMENTO CON IL CAMPO SCALARE
-    Si procede nel calcolo dell'elemento di matrice $S$ scegliendo $\xi=1$. Si riportano i valori di $M_i$ relativi ai diagrammi (\ref{Diagrams}). I propagatori del fotone e del campo di Higgs fisico $H$ sono rispettivamente
+    Si procede nel calcolo dell'elemento di matrice $S$ scegliendo $\xi=1$. Si riportano i valori di $M_j$ relativi ai diagrammi (\ref{Diagrams}). I propagatori del fotone e del campo di Higgs fisico $H$ sono rispettivamente
     $iG_{F,A}^{\mu\nu}(k)=-ig^{\mu\nu}/k^2$ e $i\Delta_{F,H}(p)=i/(p^2-M_H^2)$, data $M_H$ la massa del bosone di Higgs.
     \begin{align}
-    M_1=&\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)\\
-    M_2=&\left(\frac{ig}{4c}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)\\
-    M_3=&\left(\frac{g}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)\gamma^5u(p_2)\frac{i}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^5v(p_4)\\
-    M_4=&\left(\frac{-ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)
+    M_1=&\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)\label{M1}\\
+    M_2=&\left(\frac{ig}{4c}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)\label{M2}\\
+    M_3=&\left(\frac{g}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)\gamma^5u(p_2)\frac{i}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^5v(p_4)\label{M3}\\
+    M_4=&\left(\frac{-ig}{2}\right)^2\frac{m_em_\mu}{M_W^2}\bar{v}(p_1)u(p_2)\frac{i}{(p_1+p_2)^2-M_H^2}\bar{u}(p_3)v(p_4)\label{M4}
     \end{align}
-
-    \subsection*{Il termine di QED}
+    \subsection*{I termini di pura elettrodinamica e di pura interazione debole}
     Poiché si è interessati alla sezione d'urto non polarizzata, si somma sullo spin dei fermioni uscenti e si media sullo spin dei fermioni entranti la quantità $\lvert M_1\rvert^2$, ottenendo
     % QED: (spin averaged) modulus squared of amplitude
     \begin{equation}
@@ -253,13 +252,12 @@
     \end{equation}
     Svolgendo l'algebra delle tracce di matrici di Dirac ed esprimendo il risultato in termini degli invarianti di Mandelstam $s$, $t$ e $u$ si ottiene
     % QED -> Mandelstam (spin averaged) modulus squared of amplitude
-    \begin{equation}
+    \begin{equation}\label{QEDM1SQUARE}
     \frac{1}{4}\sum_{spin}\lvert M_1\rvert^2=\frac{2e^4}{s^2}\{(u-m_e^2-m_\mu^2)^2+(t-m_e^2-m_\mu^2)^2+2(m_e^2+m_\mu^2)s\}
     \end{equation}
-    \subsection*{Il termine d'interazione debole}
-
+    Analogamente si ottiene il termine $\lvert M_2\rvert^2$ relativo all'interazione debole
     % WEAK -> Mandelstam (spin averaged) modulus squared of amplitude
-    \begin{equation}
+    \begin{equation}\label{WEAKM2SQUARE}
     \begin{split}
     \frac{1}{4}\sum_{spin}\lvert M_2\rvert^2=2\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\{&[(V^2+1)^2+4V^2](u-m_e^2-m_\mu^2)^2\\
     +&[(V^2+1)^2-4V^2](t-m_e^2-m_\mu^2)^2\\
@@ -267,26 +265,62 @@
     +&8m_\mu^2 m_e^2(V^2-1)^2\}
     \end{split}
     \end{equation}
-
-    \subsection*{Il contributo del campo scalare: $\phi^0$}
-
-    \subsection*{Il contributo del campo scalare: $H$}
+    In entrambi i termini sono presenti combinazioni degli invarianti $t$ e $u$ che determinano una dipendenza dagli angoli dei fermioni uscenti. 
+    \subsection*{Il contributo dei campi scalari $\phi^0$ e $H$}
+    % PHI0 -> Mandelstam (spin averaged) modulus squared of amplitude
+    A partire dalle espressioni (\ref{M3}) e (\ref{M4}) si calcolano le ampiezze per i diagrammi relativi alle interazioni con i campi scalari
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{spin}\lvert M_3\rvert^2=\left(\frac{g}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_Z^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
+     +&2(m_e^2+m_\mu^2)s-4m_e^2m_\mu^2\}
+    \end{split}
+    \end{equation}
     % HIGGS -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}
     \begin{split}
-    \frac{1}{4}\sum_{spin}\lvert M_H\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
-     -&2(m_e^2+m_\mu^2)s+8m_e^2m_\mu^2\}
+    \frac{1}{4}\sum_{spin}\lvert M_4\rvert^2=\left(\frac{ig}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\{&(s-2m_e^2)(s-2m_\mu^2)\\
+     -&2(m_e^2+m_\mu^2)s+12m_e^2m_\mu^2\}
     \end{split}
     \end{equation}
-
+    Differentemente da quanto si è verificato per i contributi (\ref{QEDM1SQUARE}) e (\ref{WEAKM2SQUARE}), i risultati ottenuti sono esprimibili in termini del solo invariante di Mandelstam $s$.
+    La dipendenza angolare è in questo caso uniforme: questo fatto è riconducibile all'assenza di spin sulle linee interne dei diagrammi.
     \subsection*{I termini d'interferenza}
-    % WEAK x QED -> Mandelstam (spin averaged) modulus squared of amplitude
+    Dovendo considerare 4 diagrammi indipendenti, si ottengono in principio $4!\cdot(2!)^{-1}=12$ termini d'interferenza. Si verifica che i termini relativi alla stessa coppia di diagrammi sono
+    equivalenti. Per simmetria restano pertanto $6$ contributi indipendenti. Si considera per primo il termine d'interferenza dato da $M_3M_1^{\dagger}$ e nel calcolo non polarizzato si trascurano le costanti
+    % QED x PHI0
     \begin{equation}
     \begin{split}
-    \frac{1}{4}\sum_{spin} M_1 M_2^{\dagger}=2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\{&(V^2+1)(u-m_e^2-m_\mu^2)^2\\
+    \frac{1}{4}\sum_{spin} M_3 M_1^{\dagger}=\frac{1}{4}\sum_{spin} M_1 M_3^{\dagger} \Rightarrow \mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^5(\slashed{p}_1-m_e)\gamma^{\mu}\}\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma^5(\slashed{p}_3+m_\mu)\gamma_{\mu}\}
+    \end{split}
+    \end{equation}
+    Espandendo le parentesi si ottengono esclusivamente tracce della forma $\mathrm{tr}\{\gamma^5\gamma^\mu\}$, $\mathrm{tr}\{\gamma^5\gamma^\mu\gamma^\nu\}$ e $\mathrm{tr}\{\gamma^5\gamma^\mu\gamma^\nu\gamma^\alpha\}$, tutte nulle.
+    Analogamente si ottiene che il contributo $4^{-1}\sum_{spin}M_4M_3^{\dagger}$ sono nulli per considerazioni analoghe sulle tracce di matrici di Dirac
+    % HIGGS x PHI0
+    \begin{equation}
+    \begin{split}
+    \frac{1}{4}\sum_{spin} M_3 M_4^{\dagger}=\frac{1}{4}\sum_{spin} M_4 M_3^{\dagger} \Rightarrow \mathrm{tr}\{(\slashed{p}_2+m_e)\gamma^5(\slashed{p}_1-m_e)\}\mathrm{tr}\{(\slashed{p}_4-m_\mu)\gamma^5(\slashed{p}_3+m_\mu)\}=0
+    \end{split}
+    \end{equation}
+    Si riportano di seguito i 4 contributi indipendenti non nulli restanti
+    % WEAK x QED -> Mandelstam (spin averaged) modulus squared of amplitude
+    \begin{equation}\label{WEAKxQEDinterf}
+    \begin{split}
+    \frac{1}{4}\sum_{spin} M_2 M_1^{\dagger}=\frac{1}{4}\sum_{spin} M_1 M_2^{\dagger}=2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\{&(V^2+1)(u-m_e^2-m_\mu^2)^2\\
     +&(V^2-1)(t-m_e^2-m_\mu^2)^2\\
     +&2V^2(m_e^2+m_\mu^2)s\}
     \end{split}
+    \end{equation}
+    % HIGGS x QED
+    \begin{equation}
+    \frac{1}{4}\sum_{spin} M_4 M_1^{\dagger}=\frac{1}{4}\sum_{spin} M_1 M_4^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\frac{e^2}{s(s-M_H^2)}\{ (u-m_e^2-m_\mu^2)-(t-m_e^2-m_\mu^2) \}
+    \end{equation}
+    % PHI0 x WEAK
+    \begin{equation}
+    \frac{1}{4}\sum_{spin} M_3 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_3^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\frac{e^2}{(s-M_Z^2)^2}\{ (u-m_e^2-m_\mu^2)+(t-m_e^2-m_\mu^2) \}
+    \end{equation}
+    % HIGGS x WEAK
+    \begin{equation}
+    \frac{1}{4}\sum_{spin} M_4 M_1^{\dagger}=\frac{1}{4}\sum_{spin} M_1 M_4^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\frac{e^2}{(s-M_Z^2)(s-M_H^2)}\{ (u-m_e^2-m_\mu^2)-(t-m_e^2-m_\mu^2) \}
     \end{equation}
 
     % CINEMATICA: LE DEFINIZIONI DEGLI IMPULSI INLINE
@@ -306,14 +340,15 @@
 
     % THE cross section
     \begin{equation}
-    \begin{split}
+    \resizebox{1\textwidth}{!}{
+        $\begin{split}
     &\frac{d\sigma}{d\cos\theta}=\frac{1}{32\pi s}\left(\frac{s-4m_\mu^2}{s-4m_e^2}\right)^{\frac{1}{2}} \Bigg\{ \Bigg. \frac{e^4}{s^2}\Big\{ \Big. s^2+(s-4m_\mu^2)(s-4m_e^2)\cos^2\theta+4(m_e^2+m_\mu^2)s\Big. \Big\} \\
-    +&\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\Big\{ \Big. (V^2+1)^2\left[s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta\right]+4V^2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
-    +&2(V^4-1)\left[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2\right]+8m_\mu^2 m_e^2(V^2-1)^2 \Big. \Big\}\\
+    +&\left(\frac{g}{4c}\right)^4\frac{1}{(s-M_Z^2)^2}\Big\{ \Big. (V^2+1)^2\left[s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta\right]+8V^2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
+    +&4(V^4-1)\left[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2\right]+16m_\mu^2 m_e^2(V^2-1)^2 \Big. \Big\}\\
     +&2e^2\left(\frac{g}{4c}\right)^2\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
     +&4V^2(m_e^2+m_\mu^2) \Big. \Big\}
-    \Bigg. \Bigg\}
-    \end{split}
+    \Bigg. \Bigg\} 
+        \end{split}$}
     \end{equation}
 
 
