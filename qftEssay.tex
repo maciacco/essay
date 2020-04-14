@@ -77,7 +77,7 @@
     %-----------------------------------------------------------------
 
     \begin{abstract}
-    In questo \textit{essay} sono calcolati i termini d'interazione fermione-antifermione-scalare nel Modello Standard necessari per il calcolo
+    In questo \textit{essay} sono calcolati i termini d'interazione leptone-antileptone-scalare nel Modello Standard necessari per il calcolo
     completo dell'ampiezza del processo ed è verificata l'indipendenza dalla scelta di gauge dell'elemento di matrice $S$ all'ordine perturbativo più basso.
     $\mathrm{\grave{E}}$ infine presentato il calcolo della sezione d'urto differenziale.
     \end{abstract}
@@ -112,9 +112,9 @@
     Il fattore $2^{-\frac{1}{2}}$ permette di ottenere i corretti termini cinetici per i campi reali
     % Scalar field definition in terms of Higgs and phi0
     \begin{equation}\label{PhiParameterization}
-    \Phi=\begin{pmatrix}0 \\F\end{pmatrix}+\begin{pmatrix}\phi_1 \\\phi_2\end{pmatrix}=\begin{pmatrix}0\\F\end{pmatrix}+\frac{1}{\sqrt{2}}\begin{pmatrix}\sqrt{2}\phi_1 \\H+i\phi^0\end{pmatrix}
+    \Phi=\begin{pmatrix}0 \\F\end{pmatrix}+\begin{pmatrix}\phi_1 \\\phi_2\end{pmatrix}=\begin{pmatrix}0\\F\end{pmatrix}+\frac{1}{\sqrt{2}}\begin{pmatrix}\sqrt{2}\phi^+ \\H+i\phi^0\end{pmatrix}
     \end{equation}
-    L'interazione con i campi fermionici è descritta attraverso gli accoppiamenti di Yukawa
+    La prima componente è espressa in termini del campo complesso $\phi^+$. L'interazione con i campi fermionici è descritta attraverso gli accoppiamenti di Yukawa
     % Scalar-fermion lagrangian (only muon and electron are used)
     \begin{equation}\label{YukawaCouplings}
     \mathcal{L}_{sf}=-\sum_{i=e,\mu}\left\{y_i\bar{\psi}_{i,L}\Phi\psi_{i,R}+h.c.\right\}
@@ -197,7 +197,7 @@
         \end{gathered}
         \end{equation}
     \end{fmffile}
-
+    
     \normalsize
     Per calcolare l'elemento di matrice $S$ si parte dal calcolo dell'ampiezza, in cui si media sullo spin dei fermioni entranti e si somma sullo spin dei fermioni uscenti
     % Full tree-level amplitude
@@ -269,10 +269,10 @@
     % WEAK -> Mandelstam (spin averaged) modulus squared of amplitude
     \begin{equation}\label{WEAKM2SQUARE}
     \begin{split}
-    \frac{1}{4}\sum_{spin}\lvert M_2\rvert^2=2\left(\frac{g}{4c_w}\right)^4\frac{1}{(s-M_Z^2)^2}\{&[(V^2+1)^2+4V^2](u-m_e^2-m_\mu^2)^2\\
-    +&[(V^2+1)^2-4V^2](t-m_e^2-m_\mu^2)^2\\
-    +&2(V^4-1)[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2]\\
-    +&8m_\mu^2 m_e^2(V^2-1)^2\}
+    \frac{1}{4}\sum_{spin}\lvert M_2\rvert^2=2\left(\frac{g}{4c_w}\right)^4\frac{1}{(s-M_Z^2)^2}\{(&V^2+1)^2[(u-m_e^2-m_\mu^2)^2+(t-m_e^2-m_\mu^2)^2]\\
+    +&4V^2[(u-m_e^2-m_\mu^2)^2-(t-m_e^2-m_\mu^2)^2]\\
+    +&2(V^4-1)[(m_e^2+m_\mu^2)s-4m_e^2 m_\mu^2]\\
+    +&8m_e^2 m_\mu^2(V^2-1)^2\}
     \end{split}
     \end{equation}
     In entrambi i termini sono presenti combinazioni degli invarianti $t$ e $u$ che determinano una dipendenza dagli angoli di diffusione dei fermioni uscenti. 
@@ -294,7 +294,7 @@
     La dipendenza angolare è in questo caso uniforme: questo fatto è riconducibile all'assenza di spin sulle linee interne dei diagrammi.
     \subsection*{I termini d'interferenza}
     Dovendosi considerare 4 diagrammi indipendenti, si ottengono da principio $4!\cdot(2!)^{-1}=12$ termini d'interferenza. Si verifica che i termini relativi alla stessa coppia di diagrammi sono
-    equivalenti. Per simmetria restano pertanto $6$ contributi indipendenti. Si considera per primo il termine d'interferenza dato da $M_3M_1^{\dagger}$ e nel calcolo non polarizzato si trascurano le costanti
+    equivalenti. Per simmetria restano pertanto $6$ contributi indipendenti. Si considera per primo il termine d'interferenza dato da $4^{-1}\sum_{spin}M_3M_1^{\dagger}$ evidenziando solo le tracce di matrici di Dirac
     % QED x PHI0
     \begin{equation}
     \begin{split}
@@ -324,7 +324,7 @@
     \end{equation}
     % PHI0 x WEAK
     \begin{equation}
-    \frac{1}{4}\sum_{spin} M_3 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_3^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c_w}\right)^2\frac{4}{(s-M_Z^2)^2}s
+    \frac{1}{4}\sum_{spin} M_3 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_3^{\dagger}=\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c_w}\right)^2\frac{4}{(s-M_Z^2)^2}s
     \end{equation}
     % HIGGS x WEAK
     \begin{equation}
@@ -334,7 +334,7 @@
     \end{split}
     \end{equation}
     \subsection*{La cinematica del processo e i risultati finali}
-    Per passare alla sezione d'urto, si moltiplica l'ampiezza calcolata per il fattore di flusso $F$ e per l'integrale sullo spazio delle fasi delle particelle uscenti dal processo. Si considera il sistema di riferimento del centro di massa.
+    Per passare alla sezione d'urto, si moltiplica l'ampiezza calcolata per il fattore di flusso $F$ e per l'integrale sullo spazio delle fasi dei fermioni uscenti dal processo. Si considera il sistema di riferimento del centro di massa.
     % flux factor and phase space integral
     \begin{equation}
 	\begin{split}
@@ -349,17 +349,17 @@
         $\begin{split}
     &\frac{d\sigma}{d\cos\theta}\Bigg. \Bigg|_{Born}=\frac{1}{32\pi s}\left(\frac{s-4m_\mu^2}{s-4m_e^2}\right)^{\frac{1}{2}} \Bigg\{ \Bigg. \frac{e^4}{s^2}\Big\{ \Big. s^2+(s-4m_\mu^2)(s-4m_e^2)\cos^2\theta+4(m_e^2+m_\mu^2)s\Big. \Big\} \\
     +&\frac{g^4}{256c_w^4}\frac{1}{(s-M_Z^2)^2}\Big\{ \Big. (V^2+1)^2\left[s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta\right]+8V^2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
-    +&4(V^4-1)\left[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2\right]+16m_\mu^2 m_e^2(V^2-1)^2 \Big. \Big\}\\
+    +&4(V^4-1)\left[(m_e^2+m_\mu^2)s-4m_e^2 m_\mu^2\right]+16m_e^2 m_\mu^2(V^2-1)^2 \Big. \Big\}\\
     +&\frac{g^4}{16}\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_Z^2)^2}s^2+\frac{g^4}{16}\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\Big\{ \Big. s^2-4(m_e^2+m_\mu^2)s+16m_e^2m_\mu^2 \Big. \Big\}\\
-    +&\frac{e^2g^2}{8c_w^2}\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta+4V^2(m_e^2+m_\mu^2) \Big. \Big\}\\
+    +&\frac{e^2g^2}{8c_w^2}\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta+4V^2(m_e^2+m_\mu^2)s \Big. \Big\}\\
     +&2g^2e^2\frac{(m_em_\mu)^2}{M_W^2}\frac{1}{s(s-M_H^2)}\Big\{ \Big. (s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta \Big. \Big\}\\
     +&\frac{g^4}{8c_w^2}\frac{(m_em_\mu)^2}{M_W^2}\frac{1}{(s-M_Z^2)^2}s+\frac{g^4}{8c_w^2}V^2\frac{(m_em_\mu)^2}{M_W^2}\frac{1}{(s-M_Z^2)(s-M_H^2)}\Big\{ \Big. (s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta \Big. \Big\}\Bigg. \Bigg\} \\
         \end{split}$}
     \end{equation}
     Il fattore $(s-4m_\mu^2)^{\frac{1}{2}}$ garantisce che la sezione d'urto sia definita per $\sqrt{s}\geq 2m_\mu$, cioè solo quando l'energia nel sistema di riferimento del centro di massa è sufficiente per creare la massa della coppia $\mu^+\mu^-$.
-    Dal momento che $M_H>M_Z\gg 2m_\mu$, i termini in $(s-M_H)^{-1}$ e $(s-M_H)^{-1}$ introducono poli in $s=M_H$ e $s=M_Z$. La presenza dei termini in $\cos\theta$ produce un'asimmetria nella sezione d'urto rispetto all'angolo di diffusione $\theta$:
+    Poiché che $M_H>M_Z\gg 2m_\mu$, i termini in $(s-M_Z^2)^{-1}$ e $(s-M_H^2)^{-1}$ introducono poli in $\sqrt{s}=M_H$ e $\sqrt{s}=M_Z$ nella sezione d'urto totale. La presenza dei termini in $\cos\theta$ produce un'asimmetria nella sezione d'urto rispetto all'angolo di diffusione $\theta$:
     dal segno di tali contributi si deduce che essa è maggiore a $\theta=0$ rispetto a $\theta=\pi$.
-    Si osserva infine che, poiché i rapporti $m_e/M_W\simeq6\cdot 10^{-6}$ e $m_\mu/M_W\simeq 10^{-3}$ sono molto minori dell'unità, le correzioni
+    Infine, poiché i rapporti $m_e/M_W\simeq6\cdot 10^{-6}$ e $m_\mu/M_W\simeq 10^{-3}$ sono molto minori dell'unità, le correzioni
     date dai contributi relativi alle interazioni con i campi scalari $H$ e $\phi^0$ sono molto inferiori rispetto agli altri termini in (\ref{fullDifferentialCrossSection}).
     \nocite{sterman}
     \nocite{veltman}
