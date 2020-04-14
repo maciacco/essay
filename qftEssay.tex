@@ -77,8 +77,9 @@
     %-----------------------------------------------------------------
 
     \begin{abstract}
-    In questo \textit{essay} sono calcolati i termini d'interazione leptone-antileptone-scalare nel Modello Standard necessari per il calcolo
-    completo dell'ampiezza del processo ed è verificata l'indipendenza dalla scelta di gauge dell'elemento di matrice $S$ all'ordine perturbativo più basso.
+    La produzione di una coppia $\mu^+\mu^-$ dall'annichilazione elettrone-positrone è un processo studiato negli esperimenti ai collider $e^+e^-$ e trova
+    la sua descrizione teorica nel contesto del Modello Standard. In questo \textit{essay} sono calcolati i termini d'interazione leptone-antileptone-scalare necessari per il calcolo
+    completo dell'ampiezza del processo ed è verificata l'indipendenza dell'elemento di matrice $S$ dalla scelta di gauge all'ordine perturbativo più basso.
     $\mathrm{\grave{E}}$ infine presentato il calcolo della sezione d'urto differenziale.
     \end{abstract}
 
@@ -89,7 +90,7 @@
     % -------------
     \section{\centering\textsc{Introduzione} } % Cioè l'ultima sezione da scrivere
     Le interazioni elettrodeboli sono descritte in modo unificato nella lagrangiana con gruppo di simmetria $SU(2)\times U(1)$. In tale modello, i leptoni interagiscono con i quattro campi di gauge 
-    $W^\pm_\mu$, $Z_\mu$ e $A_\mu$, e con il doppietto scalare complesso $\Phi$ necessario per l'introduzione dei termini di massa. Nel caso particolare del processo $e^+e^-\to\mu^+\mu^-$, all'ordine più basso in teoria delle perturbazioni, 
+    $W^\pm_\mu$, $Z_\mu$ e $A_\mu$, e con il doppietto scalare complesso $\Phi$ necessario per l'introduzione di termini di massa gauge-invarianti. Nel caso particolare del processo $e^+e^-\to\mu^+\mu^-$, all'ordine più basso in teoria delle perturbazioni, 
     la parte di lagrangiana d'interazione $\mathcal{L}_{int}$ da considerare è formata da due contributi separati. Il primo è il termine di correnti neutre
     % neutral current lagrangian for electron and muon
     \begin{equation}
@@ -135,7 +136,7 @@
     =-&y_j\bar{\ell}_jF\ell_j-\frac{y_j}{\sqrt{2}}\bar{\ell}_j H \ell_j-i\frac{y_j}{\sqrt{2}}\bar{\ell}_j \gamma^5\phi^0 \ell_j
     \end{split}
     \end{equation}
-    Il primo termine è responsabile della massa dei fermioni. I termini d'interazione relativi rispettivamente a $H$ e $\phi^0$ sono dati dal prodotto di campi non equivalenti, pertanto i vertici corrispondenti si deducono in modo diretto dalla lagrangiana.
+    In analogia al termine di massa della lagrangiana di Dirac, il primo termine è responsabile della massa dei fermioni. I termini d'interazione relativi rispettivamente a $H$ e $\phi^0$ sono dati dal prodotto di campi non equivalenti, pertanto i vertici corrispondenti si deducono in modo diretto dalla lagrangiana.
     Utilizzando l'espressione (\ref{YukawaConstant}) per la costante di accoppiamento, si ottengono rispettivamente i valori $-(2\pi)^4i[2^{-1}g(m_j/M_W)]$ e $(2\pi)^42^{-1}g(m_j/M_W)\gamma^5$ nello spazio degli impulsi.
 
     \section{\centering\textsc{L'indipendenza dell'elemento di matrice \textit{S} dalla scelta del gauge} } % verificata per il diagramma ad albero, quindi solo per un ordine perturbativo
@@ -197,7 +198,7 @@
         \end{gathered}
         \end{equation}
     \end{fmffile}
-    
+
     \normalsize
     Per calcolare l'elemento di matrice $S$ si parte dal calcolo dell'ampiezza, in cui si media sullo spin dei fermioni entranti e si somma sullo spin dei fermioni uscenti
     % Full tree-level amplitude
@@ -226,11 +227,11 @@
     % M2 - Dirac equation applied
     \begin{equation}
     \begin{split}
-    M_2\Rightarrow\left(\frac{g}{4c_w}\right)^2 \frac{i(1-\xi^2)}{s^2-M_Z^2}\frac{-1}{s-\xi^2 M_Z^2}\Big\{ \Big.&m_e[-\bar{v}(p_1)\gamma_\mu(V+\gamma^5)u(p_2)+\bar{v}(p_1)\gamma_\mu(V-\gamma^5)u(p_2)] \\
-    \times &m_\mu[\bar{u}(p_3)\gamma_\nu(V+\gamma^5)v(p_4)-\bar{u}(p_3)\gamma_\nu(V-\gamma^5)v(p_4)]\Big. \Big\}
+    M_2\Rightarrow\left(\frac{g}{4c_w}\right)^2 \frac{i(1-\xi^2)}{s^2-M_Z^2}\frac{-1}{s-\xi^2 M_Z^2}\Big\{ \Big.&m_e[-\bar{v}(p_1)(V+\gamma^5)u(p_2)+\bar{v}(p_1)(V-\gamma^5)u(p_2)] \\
+    \times &m_\mu[\bar{u}(p_3)(V+\gamma^5)v(p_4)-\bar{u}(p_3)(V-\gamma^5)v(p_4)]\Big. \Big\}
     \end{split}
     \end{equation}
-    Si elimina la dipendenza dai termini di accoppiamento vettoriale e si mette in evidenza un fattore $m_em_\mu$ comune anche a $M_3$. In $M_3$ si utilizza la relazione $M_W=c_wM_Z$ che lega le masse dei bosoni $W^\pm$ e $Z^0$. La somma dei due contributi è infine
+    Si elimina la dipendenza dai termini di accoppiamento vettoriale e si mette in evidenza un fattore $m_em_\mu$ comune anche a $M_3$. In $M_3$ si moltiplica per $1=4/4$ e si utilizza la relazione $M_W=c_wM_Z$ che lega le masse dei bosoni $W^\pm$ e $Z^0$. La somma dei due contributi è infine
     esprimibile come
     % Gauge invariance proof
     \begin{equation}\label{proofGauge}
@@ -243,8 +244,8 @@
     $p^\mu p^\nu/M_Z^2$ del propagatore del campo $Z_\mu$ nel gauge unitario ($\xi\to\infty$).
 
     \section{\centering\textsc{La sezione d'urto differenziale} } % Contributi QED e Weak INSERIRE A QUESTO PUNTO LE CONSIDERAZIONI SULL'ACCOPPIAMENTO CON IL CAMPO SCALARE
-    Si procede nel calcolo dell'elemento di matrice $S$ scegliendo $\xi=1$. Si riportano i valori di $M_j$ relativi ai diagrammi (\ref{Diagrams}). I propagatori del fotone e del campo di Higgs fisico $H$ sono rispettivamente
-    $iG_{F,A}^{\mu\nu}(k)=-ig^{\mu\nu}/k^2$ e $i\Delta_{F,H}(p)=i/(p^2-M_H^2)$, data $M_H$ la massa del bosone di Higgs.
+    Si procede nel calcolo dell'elemento di matrice $S$ scegliendo $\xi=1$. Si riportano i valori di $M_j$ relativi ai diagrammi (\ref{Diagrams}). A meno di $(2\pi)^{-4}$, i propagatori dei campi $A_\mu$ e $H$ sono rispettivamente
+    $iG_{F,A}^{\mu\nu}(k)=-ig^{\mu\nu}/k^2$ e $i\Delta_{F,H}(p)=i/(p^2-M_H^2)$, data la massa $M_H$ del bosone di Higgs.
     \begin{align}
     M_1=&\left(-ie\right)^2\bar{v}(p_1)\gamma^\mu u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2}\bar{u}(p_3)\gamma^\nu v(p_4)\label{M1}\\
     M_2=&\left(\frac{ig}{4c_w}\right)^2\bar{v}(p_1)\gamma^\mu(V+\gamma^5) u(p_2)\frac{-ig_{\mu\nu}}{(p_1+p_2)^2-M_Z^2}\bar{u}(p_3)\gamma^\nu(V+\gamma^5) v(p_4)\label{M2}\\
@@ -357,7 +358,7 @@
         \end{split}$}
     \end{equation}
     Il fattore $(s-4m_\mu^2)^{\frac{1}{2}}$ garantisce che la sezione d'urto sia definita per $\sqrt{s}\geq 2m_\mu$, cioè solo quando l'energia nel sistema di riferimento del centro di massa è sufficiente per creare la massa della coppia $\mu^+\mu^-$.
-    Poiché che $M_H>M_Z\gg 2m_\mu$, i termini in $(s-M_Z^2)^{-1}$ e $(s-M_H^2)^{-1}$ introducono poli in $\sqrt{s}=M_H$ e $\sqrt{s}=M_Z$ nella sezione d'urto totale. La presenza dei termini in $\cos\theta$ produce un'asimmetria nella sezione d'urto rispetto all'angolo di diffusione $\theta$:
+    Siccome $M_H>M_Z\gg 2m_\mu$, i termini in $(s-M_Z^2)^{-1}$ e $(s-M_H^2)^{-1}$ introducono poli in $\sqrt{s}=M_H$ e $\sqrt{s}=M_Z$ nella sezione d'urto totale. La presenza dei termini in $\cos\theta$ produce, fissata $\sqrt{s}$, un'asimmetria nella (\ref{fullDifferentialCrossSection}) rispetto all'angolo di diffusione $\theta$:
     dal segno di tali contributi si deduce che essa è maggiore a $\theta=0$ rispetto a $\theta=\pi$.
     Infine, poiché i rapporti $m_e/M_W\simeq6\cdot 10^{-6}$ e $m_\mu/M_W\simeq 10^{-3}$ sono molto minori dell'unità, le correzioni
     date dai contributi relativi alle interazioni con i campi scalari $H$ e $\phi^0$ sono molto inferiori rispetto agli altri termini in (\ref{fullDifferentialCrossSection}).
