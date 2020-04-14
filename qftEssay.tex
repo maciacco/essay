@@ -141,7 +141,7 @@
     \section{\centering\textsc{L'indipendenza dell'elemento di matrice \textit{S} dalla scelta del gauge} } % verificata per il diagramma ad albero, quindi solo per un ordine perturbativo
     La teoria che si sta considerando è una teoria di gauge, pertanto la sua quantizzazione richiede l'introduzione di un termine \textit{gauge fixing} secondo il metodo di Faddeev-Popov. In analogia a quanto sviluppato per il modello di Higgs abeliano,
     è possibile introdurre una condizione dipendente da un parametro $\xi$ e definire così la famiglia di gauge $R_\xi$. In questo caso $\phi^0$ è il campo non fisico, presente nello spettro della teoria con $\xi$ di valore generico, associato al campo $Z_\mu$ in quanto entrambi reali.
-    In generale, quindi, data la lagrangiana d'interazione complessiva $\mathcal{L}_{int}=\mathcal{L}_{nc}+\mathcal{L}_{sf}$, si isolano i seguenti diagrammi di Feynman indipendenti all'ordine $O(g^2)$ ($\sim O(e^2)$, essendo $e=g\sin\theta_w$) dello sviluppo perturbativo
+    In generale, quindi, data la lagrangiana d'interazione complessiva $\mathcal{L}_{int}=\mathcal{L}_{nc}+\mathcal{L}_{sf}$, si isolano i seguenti diagrammi di Feynman indipendenti all'ordine $O(g^2)$ ($\sim O(e^2)$, essendo $e=gs_w\equiv g\sin\theta_w$) dello sviluppo perturbativo
     dell'elemento di matrice $S$
 
     \smallskip
@@ -293,7 +293,7 @@
     Differentemente da quanto si è verificato per i contributi (\ref{QEDM1SQUARE}) e (\ref{WEAKM2SQUARE}), i risultati ottenuti sono esprimibili in termini del solo invariante di Mandelstam $s$.
     La dipendenza angolare è in questo caso uniforme: questo fatto è riconducibile all'assenza di spin sulle linee interne dei diagrammi.
     \subsection*{I termini d'interferenza}
-    Dovendo considerare 4 diagrammi indipendenti, si ottengono da principio $4!\cdot(2!)^{-1}=12$ termini d'interferenza. Si verifica che i termini relativi alla stessa coppia di diagrammi sono
+    Dovendosi considerare 4 diagrammi indipendenti, si ottengono da principio $4!\cdot(2!)^{-1}=12$ termini d'interferenza. Si verifica che i termini relativi alla stessa coppia di diagrammi sono
     equivalenti. Per simmetria restano pertanto $6$ contributi indipendenti. Si considera per primo il termine d'interferenza dato da $M_3M_1^{\dagger}$ e nel calcolo non polarizzato si trascurano le costanti
     % QED x PHI0
     \begin{equation}
@@ -324,7 +324,7 @@
     \end{equation}
     % PHI0 x WEAK
     \begin{equation}
-    \frac{1}{4}\sum_{spin} M_3 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_3^{\dagger}=\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c_w}\right)^2\frac{-4}{(s-M_Z^2)^2}\{ (u-m_e^2-m_\mu^2)+(t-m_e^2-m_\mu^2) \}
+    \frac{1}{4}\sum_{spin} M_3 M_2^{\dagger}=\frac{1}{4}\sum_{spin} M_2 M_3^{\dagger}=-\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c_w}\right)^2\frac{4}{(s-M_Z^2)^2}s
     \end{equation}
     % HIGGS x WEAK
     \begin{equation}
@@ -338,32 +338,34 @@
     % flux factor and phase space integral
     \begin{equation}
 	\begin{split}
-	\dfrac{d\sigma}{dt} = \left(2\pi\right)^{4-6}F \int \mathrm{d}\underset{2\to2}{PS}\ \dfrac{1}{4}\sum_{spin}\lvert M\rvert^2 = \dfrac{1}{\left(2\pi\right)^{2}} \cdot \dfrac{1}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{\pi}{2s^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}} } \cdot \dfrac{1}{4}\sum_{spin}\ \sum_{i,j=1}^{4} M_i M_j^{\dagger}
+	\dfrac{d\sigma}{dt} = \left(2\pi\right)^{4-6}F \int \mathrm{d}\underset{2\to2}{PS}\ \dfrac{1}{4}\sum_{spin}\lvert M\rvert^2 = \dfrac{1}{\left(2\pi\right)^{2}} \cdot \dfrac{1}{2[s(s-4m_e^2)]^{\frac{1}{2}} } \cdot \dfrac{\pi}{2[s(s-4m_e^2)]^{\frac{1}{2}} }\cdot \dfrac{1}{4}\sum_{spin}\sum_{i,j=1}^{4} M_i M_j^{\dagger}
 	\end{split}
 	\end{equation}
-    Si passa alla sezione d'urto differenziale rispetto all'angolo $\theta$ che l'antimuone uscente forma rispetto all'asse del moto di elettrone e positrone. Si esprimono gli invarianti $t=(m_\mu^2+m_e^2-s/2+2^{-1}(s-4m_\mu^2)^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}}\cos\theta)$
+    Si passa alla sezione d'urto differenziale rispetto all'angolo $\theta$ che l'antimuone uscente forma rispetto all'asse del moto di elettrone e positrone nel sistema di riferimento del centro di massa. Si esprimono gli invarianti $t=(m_\mu^2+m_e^2-s/2+2^{-1}(s-4m_\mu^2)^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}}\cos\theta)$
     e $u=(m_\mu^2+m_e^2-s/2-2^{-1}(s-4m_\mu^2)^{\frac{1}{2}}(s-4m_e^2)^{\frac{1}{2}}\cos\theta)$ e si applica la trasformazione $d\sigma/d\cos\theta=2^{-1}(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}d\sigma/dt$
     % THE cross section
-    \begin{equation}
-    \resizebox{0.98\textwidth}{!}{
+    \begin{equation}\label{fullDifferentialCrossSection}
+    \resizebox{0.9\textwidth}{!}{
         $\begin{split}
-    &\frac{d\sigma}{d\cos\theta}=\frac{1}{32\pi s}\left(\frac{s-4m_\mu^2}{s-4m_e^2}\right)^{\frac{1}{2}} \Bigg\{ \Bigg. \frac{e^4}{s^2}\Big\{ \Big. s^2+(s-4m_\mu^2)(s-4m_e^2)\cos^2\theta+4(m_e^2+m_\mu^2)s\Big. \Big\} \\
-    +&\left(\frac{g}{4c_w}\right)^4\frac{1}{(s-M_Z^2)^2}\Big\{ \Big. (V^2+1)^2\left[s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta\right]+8V^2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
+    &\frac{d\sigma}{d\cos\theta}\Bigg. \Bigg|_{Born}=\frac{1}{32\pi s}\left(\frac{s-4m_\mu^2}{s-4m_e^2}\right)^{\frac{1}{2}} \Bigg\{ \Bigg. \frac{e^4}{s^2}\Big\{ \Big. s^2+(s-4m_\mu^2)(s-4m_e^2)\cos^2\theta+4(m_e^2+m_\mu^2)s\Big. \Big\} \\
+    +&\frac{g^4}{256c_w^4}\frac{1}{(s-M_Z^2)^2}\Big\{ \Big. (V^2+1)^2\left[s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta\right]+8V^2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta\\
     +&4(V^4-1)\left[(m_\mu^2+m_e^2)s-4m_\mu^2 m_e^2\right]+16m_\mu^2 m_e^2(V^2-1)^2 \Big. \Big\}\\
-    +&\left(\frac{g}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_Z^2)^2}s^2+\left(\frac{g}{2}\right)^4\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\Big\{ \Big. s^2-4(m_e^2+m_\mu^2)s+16m_e^2m_\mu^2 \Big. \Big\}\\
-    +&2e^2\left(\frac{g}{4c_w}\right)^2\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta+4V^2(m_e^2+m_\mu^2) \Big. \Big\}\\
-    +&2\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\frac{4e^2}{s(s-M_H^2)}\Big\{ \Big. (s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta \Big. \Big\}\\
-    +&2\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c_w}\right)^2\frac{4}{(s-M_Z^2)^2}s+2\left(\frac{g}{2}\right)^2\frac{(m_em_\mu)^2}{M_W^2}\left(\frac{g}{4c_w}\right)^2\frac{4V^2}{(s-M_Z^2)(s-M_H^2)}\Big\{ \Big. (s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta \Big. \Big\}\Bigg. \Bigg\} \\
+    +&\frac{g^4}{16}\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_Z^2)^2}s^2+\frac{g^4}{16}\left(\frac{m_em_\mu}{M_W^2}\right)^2\frac{1}{(s-M_H^2)^2}\Big\{ \Big. s^2-4(m_e^2+m_\mu^2)s+16m_e^2m_\mu^2 \Big. \Big\}\\
+    +&\frac{e^2g^2}{8c_w^2}\frac{1}{s(s-M_Z^2)}\Big\{ \Big. V^2\left[ s^2+(s-4m_e^2)(s-4m_\mu^2)\cos^2\theta \right]+2s(s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta+4V^2(m_e^2+m_\mu^2) \Big. \Big\}\\
+    +&2g^2e^2\frac{(m_em_\mu)^2}{M_W^2}\frac{1}{s(s-M_H^2)}\Big\{ \Big. (s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta \Big. \Big\}\\
+    +&\frac{g^4}{8c_w^2}\frac{(m_em_\mu)^2}{M_W^2}\frac{1}{(s-M_Z^2)^2}s+\frac{g^4}{8c_w^2}V^2\frac{(m_em_\mu)^2}{M_W^2}\frac{1}{(s-M_Z^2)(s-M_H^2)}\Big\{ \Big. (s-4m_e^2)^{\frac{1}{2}}(s-4m_\mu^2)^{\frac{1}{2}}\cos\theta \Big. \Big\}\Bigg. \Bigg\} \\
         \end{split}$}
     \end{equation}
     Il fattore $(s-4m_\mu^2)^{\frac{1}{2}}$ garantisce che la sezione d'urto sia definita per $\sqrt{s}\geq 2m_\mu$, cioè solo quando l'energia nel sistema di riferimento del centro di massa è sufficiente per creare la massa della coppia $\mu^+\mu^-$.
-    I termini in $\cos\theta$ sono responsabili dell'asimmetria della sezione d'urto rispetto all'angolo di diffusione $\theta$. Poiché i rapporti $m_e/M_W\simeq6\cdot 10^{-6}$ e $m_\mu/M_W\simeq 10^{-3}$ sono molto minori dell'unità, le correzioni
-    date dai contributi relativi alle interazioni con i campi scalari possono essere trascurate con buona approssimazione. 
+    Dal momento che $M_H>M_Z\gg 2m_\mu$, i termini in $(s-M_H)^{-1}$ e $(s-M_H)^{-1}$ introducono poli in $s=M_H$ e $s=M_Z$. La presenza dei termini in $\cos\theta$ produce un'asimmetria nella sezione d'urto rispetto all'angolo di diffusione $\theta$:
+    dal segno di tali contributi si deduce che essa è maggiore a $\theta=0$ rispetto a $\theta=\pi$.
+    Si osserva infine che, poiché i rapporti $m_e/M_W\simeq6\cdot 10^{-6}$ e $m_\mu/M_W\simeq 10^{-3}$ sono molto minori dell'unità, le correzioni
+    date dai contributi relativi alle interazioni con i campi scalari $H$ e $\phi^0$ sono molto inferiori rispetto agli altri termini in (\ref{fullDifferentialCrossSection}).
     \nocite{sterman}
     \nocite{veltman}
     %\nocite{bjorkendrell}
-    %\nocite{peskinschroeder}
-    \nocite{pdg}
+    \nocite{peskinschroeder}
+    %\nocite{pdg}
     %\nocite{appunti}
     \medskip
 
